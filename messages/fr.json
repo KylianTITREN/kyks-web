@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "siteName": "KYKS",
+    "defaultTitle": "KYKS — Studio tech",
+    "defaultDescription": "Studio tech spécialisé dans le développement de produits digitaux modernes. Expertise JavaScript, TypeScript, React, Next.js, Node.js.",
+    "kylianTitle": "Kylian Titren — Fondateur KYKS",
+    "kylianDescription": "Parcours, projets et compétences de Kylian Titren, fondateur du studio KYKS."
+  },
+  "nav": {
+    "home": "Accueil",
+    "collaborations": "Collaborations",
+    "projects": "Projets",
+    "about": "Kylian",
+    "contact": "Contact",
+    "toggleTheme": "Changer de thème",
+    "switchLang": "Changer de langue",
+    "skipToContent": "Aller au contenu"
+  },
+  "hero": {
+    "eyebrow": "Studio tech",
+    "title": "On construit des produits digitaux qui performent.",
+    "subtitle": "KYKS accompagne startups et grands comptes sur la conception, le développement et la scalabilité de leurs plateformes — avec une exigence sans concession sur la qualité et les performances.",
+    "ctaPrimary": "Discuter d'un projet",
+    "ctaSecondary": "Voir nos réalisations"
+  },
+  "collaborations": {
+    "eyebrow": "Collaborations",
+    "title": "On a travaillé avec",
+    "description": "Des équipes techniques exigeantes, sur des stacks modernes et des enjeux réels."
+  },
+  "projects": {
+    "eyebrow": "Projets",
+    "title": "Ce qu'on a livré",
+    "description": "Produits conçus, développés et maintenus — e-commerce, SaaS, vitrines, apps mobiles."
+  },
+  "manifesto": {
+    "eyebrow": "Positionnement",
+    "title": "Partenaire technique, pas prestataire.",
+    "body": "On intervient rapidement sur des problématiques complexes, avec une exigence forte sur la qualité, la performance et la scalabilité. Pas de jargon, pas de sur-ingénierie — du code qui tient, des produits qui tournent."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre projet.",
+    "description": "Un besoin ponctuel, un produit à construire, une équipe à épauler — on répond sous 24h.",
+    "email": "hello@kyks.io",
+    "cta": "Écrivez-nous"
+  },
+  "footer": {
+    "tagline": "Studio tech — Paris, remote.",
+    "rights": "Tous droits réservés.",
+    "credits": "Conçu & développé par KYKS."
+  },
+  "consent": {
+    "title": "Cookies & mesure d'audience",
+    "body": "Ce site utilise des cookies d'analyse pour comprendre comment il est utilisé et l'améliorer. Aucune donnée n'est partagée à des fins publicitaires.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "manage": "Gérer les cookies"
+  },
+  "kylian": {
+    "intro": {
+      "eyebrow": "Fondateur KYKS",
+      "title": "Kylian Titren",
+      "subtitle": "Développeur full-stack, fondateur de KYKS. J'accompagne startups et grands comptes sur la construction de produits digitaux modernes."
+    },
+    "sections": {
+      "experience": "Expériences",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "education": "Formation",
+      "social": "Me contacter"
+    }
+  }
+}
