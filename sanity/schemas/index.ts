@@ -7,11 +7,11 @@ import { skillGroup } from "./skillGroup";
 import { socialLink } from "./socialLink";
 
 export const schemaTypes = [
-  siteSettings,
-  collaboration,
-  project,
-  experience,
-  skillGroup,
-  education,
-  socialLink,
+	siteSettings,
+	collaboration,
+	project,
+	experience,
+	skillGroup,
+	education,
+	socialLink,
 ];

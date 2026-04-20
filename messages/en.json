@@ -1,74 +1,74 @@
 {
-  "meta": {
-    "siteName": "KYKS",
-    "defaultTitle": "KYKS — Tech studio",
-    "defaultDescription": "Tech studio specialized in building modern digital products. JavaScript, TypeScript, React, Next.js, Node.js expertise.",
-    "kylianTitle": "Kylian Titren — KYKS founder",
-    "kylianDescription": "Background, projects and skills of Kylian Titren, founder of KYKS studio."
-  },
-  "nav": {
-    "home": "Home",
-    "collaborations": "Collaborations",
-    "projects": "Projects",
-    "about": "Kylian",
-    "contact": "Contact",
-    "toggleTheme": "Toggle theme",
-    "switchLang": "Switch language",
-    "skipToContent": "Skip to content"
-  },
-  "hero": {
-    "eyebrow": "Tech studio",
-    "title": "We build digital products that perform.",
-    "subtitle": "KYKS partners with startups and enterprises on the design, development and scaling of their platforms — with an uncompromising focus on quality and performance.",
-    "ctaPrimary": "Start a project",
-    "ctaSecondary": "See our work"
-  },
-  "collaborations": {
-    "eyebrow": "Collaborations",
-    "title": "We've worked with",
-    "description": "Demanding tech teams, on modern stacks and real problems."
-  },
-  "projects": {
-    "eyebrow": "Projects",
-    "title": "What we've shipped",
-    "description": "Products designed, built and maintained — e-commerce, SaaS, marketing sites, mobile apps."
-  },
-  "manifesto": {
-    "eyebrow": "Positioning",
-    "title": "Tech partner, not a vendor.",
-    "body": "We tackle complex problems fast, with a strong bar on quality, performance and scalability. No jargon, no over-engineering — code that holds up, products that run."
-  },
-  "contact": {
-    "eyebrow": "Contact",
-    "title": "Let's talk about your project.",
-    "description": "Short-term need, product to build, team to support — we reply within 24h.",
-    "email": "hello@kyks.io",
-    "cta": "Get in touch"
-  },
-  "footer": {
-    "tagline": "Tech studio — Paris, remote.",
-    "rights": "All rights reserved.",
-    "credits": "Designed & built by KYKS."
-  },
-  "consent": {
-    "title": "Cookies & analytics",
-    "body": "This site uses analytics cookies to understand how it is used and improve it. No data is shared for advertising purposes.",
-    "accept": "Accept",
-    "decline": "Decline",
-    "manage": "Manage cookies"
-  },
-  "kylian": {
-    "intro": {
-      "eyebrow": "KYKS founder",
-      "title": "Kylian Titren",
-      "subtitle": "Full-stack developer, founder of KYKS. I help startups and enterprises build modern digital products."
-    },
-    "sections": {
-      "experience": "Experience",
-      "projects": "Projects",
-      "skills": "Skills",
-      "education": "Education",
-      "social": "Get in touch"
-    }
-  }
+	"meta": {
+		"siteName": "KYKS",
+		"defaultTitle": "KYKS — Tech studio",
+		"defaultDescription": "Tech studio specialized in building modern digital products. JavaScript, TypeScript, React, Next.js, Node.js expertise.",
+		"kylianTitle": "Kylian Titren — KYKS founder",
+		"kylianDescription": "Background, projects and skills of Kylian Titren, founder of KYKS studio."
+	},
+	"nav": {
+		"home": "Home",
+		"collaborations": "Collaborations",
+		"projects": "Projects",
+		"about": "Kylian",
+		"contact": "Contact",
+		"toggleTheme": "Toggle theme",
+		"switchLang": "Switch language",
+		"skipToContent": "Skip to content"
+	},
+	"hero": {
+		"eyebrow": "Tech studio",
+		"title": "We build digital products that perform.",
+		"subtitle": "KYKS partners with startups and enterprises on the design, development and scaling of their platforms — with an uncompromising focus on quality and performance.",
+		"ctaPrimary": "Start a project",
+		"ctaSecondary": "See our work"
+	},
+	"collaborations": {
+		"eyebrow": "Collaborations",
+		"title": "We've worked with",
+		"description": "Demanding tech teams, on modern stacks and real problems."
+	},
+	"projects": {
+		"eyebrow": "Projects",
+		"title": "What we've shipped",
+		"description": "Products designed, built and maintained — e-commerce, SaaS, marketing sites, mobile apps."
+	},
+	"manifesto": {
+		"eyebrow": "Positioning",
+		"title": "Tech partner, not a vendor.",
+		"body": "We tackle complex problems fast, with a strong bar on quality, performance and scalability. No jargon, no over-engineering — code that holds up, products that run."
+	},
+	"contact": {
+		"eyebrow": "Contact",
+		"title": "Let's talk about your project.",
+		"description": "Short-term need, product to build, team to support — we reply within 24h.",
+		"email": "hello@kyks.io",
+		"cta": "Get in touch"
+	},
+	"footer": {
+		"tagline": "Tech studio — Paris, remote.",
+		"rights": "All rights reserved.",
+		"credits": "Designed & built by KYKS."
+	},
+	"consent": {
+		"title": "Cookies & analytics",
+		"body": "This site uses analytics cookies to understand how it is used and improve it. No data is shared for advertising purposes.",
+		"accept": "Accept",
+		"decline": "Decline",
+		"manage": "Manage cookies"
+	},
+	"kylian": {
+		"intro": {
+			"eyebrow": "KYKS founder",
+			"title": "Kylian Titren",
+			"subtitle": "Full-stack developer, founder of KYKS. I help startups and enterprises build modern digital products."
+		},
+		"sections": {
+			"experience": "Experience",
+			"projects": "Projects",
+			"skills": "Skills",
+			"education": "Education",
+			"social": "Get in touch"
+		}
+	}
 }

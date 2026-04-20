@@ -11,5 +11,6 @@ const script = `
 `;
 
 export function ThemeScript() {
-  return <script dangerouslySetInnerHTML={{ __html: script }} />;
+	// biome-ignore lint/security/noDangerouslySetInnerHtml: inline theme script prevents FOUC, content is static and not user-controlled
+	return <script dangerouslySetInnerHTML={{ __html: script }} />;
 }
