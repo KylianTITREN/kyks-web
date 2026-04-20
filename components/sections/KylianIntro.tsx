@@ -16,7 +16,7 @@ export function KylianIntro() {
 					</h1>
 					<p className="mt-8 max-w-xl text-lg text-[var(--color-text-muted)]">{t("subtitle")}</p>
 				</div>
-				<div className="relative aspect-square w-full max-w-[280px] overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border-strong)] bg-[var(--color-surface-alt)]">
+				<div className="relative aspect-square w-[280px] shrink-0 overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border-strong)] bg-[var(--color-surface-alt)]">
 					<Image
 						src="/kylian/portrait.jpg"
 						alt="Kylian Titren"

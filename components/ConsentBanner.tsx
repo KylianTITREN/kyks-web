@@ -32,7 +32,7 @@ export function ConsentBanner() {
 			open
 			aria-live="polite"
 			aria-label={t("title")}
-			className="fixed inset-x-4 bottom-4 z-50 max-w-xl rounded-[var(--radius-lg)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-lifted)] md:inset-x-auto md:left-6 md:bottom-6"
+			className="fixed inset-x-4 bottom-4 z-50 max-w-xl rounded-[var(--radius-lg)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] p-6 text-[var(--color-text)] shadow-[var(--shadow-lifted)] md:inset-x-auto md:left-6 md:bottom-6"
 		>
 			<button
 				type="button"
