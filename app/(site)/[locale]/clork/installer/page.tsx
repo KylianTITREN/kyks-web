@@ -33,18 +33,19 @@ export default async function ClorkInstallPage({
 		>
 			<LegalSection heading="À quoi ça sert">
 				<p>
-					Votre magasin publie désormais le planning dans Clork. Vous recevez déjà vos horaires
-					par e-mail — avec l'application, vous les avez en plus sur votre téléphone, avec un
-					rappel la veille au soir, et les changements arrivent en direct si votre responsable
-					corrige quelque chose.
+					Votre magasin publie désormais le planning dans Clork. Vous recevez déjà vos horaires par
+					e-mail — avec l'application, vous les avez en plus sur votre téléphone, avec un rappel la
+					veille au soir, et les changements arrivent en direct si votre responsable corrige quelque
+					chose.
 				</p>
 			</LegalSection>
 
 			<LegalSection heading="Disponibilité">
 				<p>
-					L'application est en cours de finalisation et arrive très bientôt sur l'App Store.
-					En attendant, vous n'avez rien à faire : <strong>votre planning continue de vous être
-					envoyé par e-mail</strong> à chaque publication.
+					L'application est en cours de finalisation et arrive très bientôt sur l'App Store. En
+					attendant, vous n'avez rien à faire :{" "}
+					<strong>votre planning continue de vous être envoyé par e-mail</strong> à chaque
+					publication.
 				</p>
 				<p>
 					Pour être prévenue dès sa sortie, écrivez-nous à{" "}
@@ -57,23 +58,22 @@ export default async function ClorkInstallPage({
 
 			<LegalSection heading="Une fois l'application installée">
 				<p>
-					Rendez-vous dans <strong>Réglages → Mon magasin</strong> et indiquez votre enseigne
-					ainsi que le numéro de votre magasin (celui qui figure sur vos documents). Votre
-					responsable confirme que vous faites partie de l'équipe, et vos horaires apparaissent
-					automatiquement à chaque publication.
+					Rendez-vous dans <strong>Réglages → Mon magasin</strong> et indiquez votre enseigne ainsi
+					que le numéro de votre magasin (celui qui figure sur vos documents). Votre responsable
+					confirme que vous faites partie de l'équipe, et vos horaires apparaissent automatiquement
+					à chaque publication.
 				</p>
 				<p>
-					Si votre responsable a déjà enregistré votre adresse e-mail, il n'y a même rien à
-					saisir : créez simplement votre compte avec cette adresse et votre magasin sera déjà
-					rattaché.
+					Si votre responsable a déjà enregistré votre adresse e-mail, il n'y a même rien à saisir :
+					créez simplement votre compte avec cette adresse et votre magasin sera déjà rattaché.
 				</p>
 			</LegalSection>
 
 			<LegalSection heading="Ne plus recevoir ces e-mails">
 				<p>
 					Chaque e-mail de planning contient un lien de désinscription en bas de message. Vous
-					pouvez l'utiliser à tout moment — cela n'affecte pas votre planning, seulement son
-					envoi par e-mail.
+					pouvez l'utiliser à tout moment — cela n'affecte pas votre planning, seulement son envoi
+					par e-mail.
 				</p>
 			</LegalSection>
 
