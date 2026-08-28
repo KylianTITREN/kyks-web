@@ -4,18 +4,25 @@ type LegalShellProps = {
 	title: string;
 	subtitle: string;
 	lastUpdated: string;
+	brand?: string;
 	children: ReactNode;
 };
 
 /**
- * Mise en page commune des pages légales Clork (confidentialité, support).
+ * Mise en page commune des pages légales des apps KYKS (Clork, Interfector…).
  * Contenu statique, non indexé, hors navigation — accessible par URL directe.
  */
-export function LegalShell({ title, subtitle, lastUpdated, children }: LegalShellProps) {
+export function LegalShell({
+	title,
+	subtitle,
+	lastUpdated,
+	brand = "Clork",
+	children,
+}: LegalShellProps) {
 	return (
 		<main className="mx-auto max-w-2xl px-6 py-24 md:py-32">
 			<header className="mb-12 border-b border-border pb-8">
-				<p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">Clork</p>
+				<p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">{brand}</p>
 				<h1 className="font-display text-4xl leading-tight text-text md:text-5xl">{title}</h1>
 				<p className="mt-4 text-lg text-text-muted">{subtitle}</p>
 				<p className="mt-6 text-sm text-text-subtle">Dernière mise à jour : {lastUpdated}</p>
