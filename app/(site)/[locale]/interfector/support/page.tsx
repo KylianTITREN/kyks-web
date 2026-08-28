@@ -62,9 +62,14 @@ export default async function InterfectorSupportPage({
 
 			<LegalSection heading="Signaler un contenu ou un joueur">
 				<p>
-					Un pseudonyme ou une photo de profil inapproprié se signale directement dans
-					l'application, ou par e-mail. Nous examinons chaque signalement et retirons rapidement
-					tout contenu contraire à nos règles.
+					Un pseudonyme ou un contenu inapproprié se signale directement dans l'application : dans
+					le salon ou dans le tableau des joueurs, restez appuyé sur le joueur concerné puis
+					choisissez « Signaler ». Vous pouvez aussi nous écrire par e-mail. Nous examinons chaque
+					signalement et retirons rapidement tout contenu contraire à{" "}
+					<a className="text-accent hover:underline" href={`/${locale}/interfector/regles`}>
+						nos règles
+					</a>
+					.
 				</p>
 			</LegalSection>
 		</LegalShell>

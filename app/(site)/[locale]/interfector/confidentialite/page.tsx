@@ -50,8 +50,8 @@ export default async function InterfectorPrivacyPage({
 				<ul className="flex list-disc flex-col gap-2 pl-5">
 					<li>
 						<strong>Profil</strong> : un pseudonyme choisi par vous, un avatar, et — si vous le
-						souhaitez — une photo de profil. La photo est entièrement optionnelle : le jeu
-						fonctionne sans.
+						souhaitez — votre prénom (et nom) ainsi qu'une photo de profil. Le prénom, le nom et la
+						photo sont entièrement optionnels : le jeu fonctionne avec le pseudonyme seul.
 					</li>
 					<li>
 						<strong>Parties</strong> : les parties auxquelles vous participez, votre cible et votre
@@ -81,8 +81,8 @@ export default async function InterfectorPrivacyPage({
 
 			<LegalSection heading="3. Visibilité entre joueurs">
 				<p>
-					Interfector est un jeu social : votre pseudonyme, votre avatar et, si vous en avez ajouté
-					une, votre photo de profil sont visibles des{" "}
+					Interfector est un jeu social : votre pseudonyme, votre avatar et, si vous les avez
+					renseignés, votre prénom/nom et votre photo de profil sont visibles des{" "}
 					<strong>autres joueurs de vos parties</strong> (y compris du joueur dont vous êtes la
 					cible). Les événements de la partie (éliminations, votes résolus, fin de partie) sont
 					visibles de tous ses participants. Votre cible et votre mission ne sont{" "}
@@ -111,9 +111,11 @@ export default async function InterfectorPrivacyPage({
 			<LegalSection heading="5. Durée de conservation">
 				<p>
 					Vos données de profil sont conservées tant que votre compte est actif. Les parties
-					terminées sont conservées pour votre historique puis purgées de leurs données de jeu
-					détaillées. En cas de suppression du compte, l'ensemble de vos données est effacé et votre
-					pseudonyme est anonymisé dans les parties passées (voir la page{" "}
+					terminées sont conservées pour votre historique, puis leurs données de jeu détaillées (fil
+					d'événements, déclarations, votes, cibles) sont automatiquement purgées{" "}
+					<strong>30 jours</strong> après la fin de la partie — seuls le résumé et le classement
+					sont conservés. En cas de suppression du compte, l'ensemble de vos données est effacé et
+					votre pseudonyme est anonymisé dans les parties passées (voir la page{" "}
 					<a className="text-accent hover:underline" href={`/${locale}/interfector/compte`}>
 						Suppression de compte
 					</a>
