@@ -4,6 +4,7 @@ type LegalShellProps = {
 	title: string;
 	subtitle: string;
 	lastUpdated: string;
+	lastUpdatedLabel?: string;
 	brand?: string;
 	children: ReactNode;
 };
@@ -16,6 +17,7 @@ export function LegalShell({
 	title,
 	subtitle,
 	lastUpdated,
+	lastUpdatedLabel = "Dernière mise à jour",
 	brand = "Clork",
 	children,
 }: LegalShellProps) {
@@ -25,7 +27,9 @@ export function LegalShell({
 				<p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">{brand}</p>
 				<h1 className="font-display text-4xl leading-tight text-text md:text-5xl">{title}</h1>
 				<p className="mt-4 text-lg text-text-muted">{subtitle}</p>
-				<p className="mt-6 text-sm text-text-subtle">Dernière mise à jour : {lastUpdated}</p>
+				<p className="mt-6 text-sm text-text-subtle">
+					{lastUpdatedLabel} : {lastUpdated}
+				</p>
 			</header>
 			<div className="legal-prose flex flex-col gap-10 text-text-muted">{children}</div>
 		</main>
