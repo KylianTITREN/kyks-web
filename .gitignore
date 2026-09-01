@@ -45,3 +45,6 @@ coverage/
 .turbo/
 
 *.png
+
+# Exceptions — assets versionnés
+!public/**/*.png
