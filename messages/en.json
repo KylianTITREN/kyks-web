@@ -57,6 +57,14 @@
 		"decline": "Decline",
 		"manage": "Manage cookies"
 	},
+	"notFound": {
+		"eyebrow": "404 error",
+		"title": "This page has left the studio.",
+		"subtitle": "The link you followed doesn't exist anymore, has been renamed, or maybe never existed. No big deal — the rest of the studio is waiting for you.",
+		"ctaPrimary": "Back to home",
+		"ctaSecondary": "See Kylian's CV",
+		"meta": "Code 404 · KYKS"
+	},
 	"kylian": {
 		"intro": {
 			"eyebrow": "KYKS founder",
