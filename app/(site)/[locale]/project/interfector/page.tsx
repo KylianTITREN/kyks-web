@@ -4,12 +4,19 @@ import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 
+const APP_STORE_ID = "6806593700";
+const APP_STORE_URL = `https://apps.apple.com/fr/app/id${APP_STORE_ID}`;
+
 export const metadata: Metadata = {
 	title: "Interfector — Le jeu du Killer",
 	description:
 		"Interfector, l'app mobile qui digitalise le jeu du Killer. Une cible secrète, une mission absurde. Un projet KYKS.",
 	robots: { index: false, follow: false, noarchive: true, nosnippet: true },
 	alternates: { canonical: null },
+	itunes: {
+		appId: APP_STORE_ID,
+		appArgument: "https://kyks.io/project/interfector",
+	},
 };
 
 type Storyboard = {
@@ -39,6 +46,16 @@ type Copy = {
 	viewLegal: string;
 	viewSupport: string;
 	credits: string;
+	download: {
+		kicker: string;
+		title: string;
+		body: string;
+		appleOverline: string;
+		appleLabel: string;
+		playOverline: string;
+		playLabel: string;
+		playSoon: string;
+	};
 };
 
 const COPY: Record<Locale, Copy> = {
@@ -119,6 +136,16 @@ const COPY: Record<Locale, Copy> = {
 		viewLegal: "Conditions & confidentialité",
 		viewSupport: "Support Interfector",
 		credits: "Design, code et direction produit : Kylian Titren pour KYKS.",
+		download: {
+			kicker: "Télécharger",
+			title: "Prends l'app. Lance ta première partie.",
+			body: "Disponible dès maintenant sur iPhone. Version Android en préparation.",
+			appleOverline: "Télécharger sur",
+			appleLabel: "App Store",
+			playOverline: "Disponible sur",
+			playLabel: "Google Play",
+			playSoon: "Bientôt",
+		},
 	},
 	en: {
 		badge: "A KYKS project · 2026",
@@ -197,6 +224,16 @@ const COPY: Record<Locale, Copy> = {
 		viewLegal: "Terms & privacy",
 		viewSupport: "Interfector support",
 		credits: "Design, code and product direction by Kylian Titren for KYKS.",
+		download: {
+			kicker: "Download",
+			title: "Grab the app. Run your first round.",
+			body: "Live on iPhone. Android version in the works.",
+			appleOverline: "Download on the",
+			appleLabel: "App Store",
+			playOverline: "Get it on",
+			playLabel: "Google Play",
+			playSoon: "Coming soon",
+		},
 	},
 };
 
@@ -208,6 +245,44 @@ const MUTED = "#C2BAB2";
 const SUBTLE = "#8A837C";
 const ACCENT = "#EC3013";
 const DIVIDER = "#37342F";
+
+function AppleLogo({ size = 22 }: { size?: number }) {
+	return (
+		<svg
+			width={size}
+			height={size}
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			aria-hidden="true"
+			role="img"
+		>
+			<path d="M17.564 13.02c-.026-2.65 2.163-3.919 2.262-3.98-1.232-1.801-3.15-2.048-3.834-2.079-1.634-.165-3.19.962-4.02.962-.833 0-2.108-.937-3.464-.912-1.783.026-3.428 1.037-4.348 2.633-1.855 3.213-.474 7.968 1.334 10.578.88 1.28 1.93 2.716 3.303 2.665 1.327-.053 1.826-.86 3.43-.86 1.605 0 2.055.86 3.457.833 1.427-.026 2.331-1.302 3.204-2.585 1.008-1.484 1.423-2.923 1.447-2.998-.031-.014-2.773-1.065-2.798-4.203M14.968 5.297C15.7 4.41 16.19 3.19 16.056 1.98c-1.038.041-2.293.688-3.05 1.575-.68.786-1.273 2.038-1.114 3.223 1.157.09 2.34-.588 3.076-1.482" />
+		</svg>
+	);
+}
+
+function GooglePlayLogo({ size = 22 }: { size?: number }) {
+	return (
+		<svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" role="img">
+			<path
+				d="M3.609 1.814L13.792 12 3.61 22.186a1.5 1.5 0 01-.61-1.21V3.024c0-.478.234-.9.61-1.21z"
+				fill="#00C3FF"
+			/>
+			<path
+				d="M16.807 8.917l-2.518 2.518L4.243 1.39a1.5 1.5 0 01.746.199l11.818 7.328z"
+				fill="#00E676"
+			/>
+			<path
+				d="M20.16 10.995a1.5 1.5 0 010 2.61l-3.354 2.077-2.517-2.517 2.517-2.518 3.354 2.348z"
+				fill="#FFC107"
+			/>
+			<path
+				d="M16.807 15.083L4.99 22.41a1.5 1.5 0 01-.747.2l10.046-10.045 2.518 2.518z"
+				fill="#FF3D00"
+			/>
+		</svg>
+	);
+}
 
 function InterfectorMark({ size = 96 }: { size?: number }) {
 	return (
@@ -503,6 +578,84 @@ export default async function InterfectorProjectPage({
 								</Link>
 							</li>
 						</ul>
+					</div>
+				</div>
+
+				{/* DOWNLOAD BADGES */}
+				<div
+					className="mt-24 rounded-3xl border p-8 md:p-12"
+					style={{ borderColor: DIVIDER, background: SURFACE }}
+				>
+					<div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16">
+						<div>
+							<div
+								className="text-xs font-semibold uppercase tracking-[0.24em]"
+								style={{ color: ACCENT }}
+							>
+								{t.download.kicker}
+							</div>
+							<h2 className="mt-4 font-[family-name:var(--font-sans)] text-[clamp(1.75rem,3.5vw,2.5rem)] font-black leading-[1] tracking-[-0.03em]">
+								{t.download.title}
+							</h2>
+							<p className="mt-4 max-w-md text-base leading-relaxed" style={{ color: MUTED }}>
+								{t.download.body}
+							</p>
+						</div>
+
+						<div className="flex flex-col gap-3 sm:flex-row md:flex-col md:items-stretch">
+							<a
+								href={APP_STORE_URL}
+								target="_blank"
+								rel="noreferrer noopener"
+								className="group inline-flex flex-1 items-center gap-3 rounded-2xl px-5 py-3 transition-transform hover:-translate-y-0.5"
+								style={{ background: TEXT, color: BG }}
+								aria-label={`${t.download.appleOverline} ${t.download.appleLabel}`}
+							>
+								<AppleLogo size={28} />
+								<span className="flex flex-col leading-tight">
+									<span
+										className="text-[10px] font-medium uppercase tracking-[0.16em]"
+										style={{ color: `${BG}CC` }}
+									>
+										{t.download.appleOverline}
+									</span>
+									<span className="text-xl font-bold tracking-[-0.01em]">
+										{t.download.appleLabel}
+									</span>
+								</span>
+							</a>
+
+							<div
+								className="relative inline-flex flex-1 cursor-not-allowed items-center gap-3 rounded-2xl border px-5 py-3"
+								style={{
+									borderColor: DIVIDER,
+									background: SURFACE_ALT,
+									color: MUTED,
+									opacity: 0.7,
+								}}
+								aria-disabled="true"
+								aria-label={`${t.download.playLabel} — ${t.download.playSoon}`}
+							>
+								<GooglePlayLogo size={28} />
+								<span className="flex flex-col leading-tight">
+									<span
+										className="text-[10px] font-medium uppercase tracking-[0.16em]"
+										style={{ color: SUBTLE }}
+									>
+										{t.download.playOverline}
+									</span>
+									<span className="text-xl font-bold tracking-[-0.01em]" style={{ color: TEXT }}>
+										{t.download.playLabel}
+									</span>
+								</span>
+								<span
+									className="absolute -top-2 right-3 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em]"
+									style={{ background: ACCENT, color: TEXT }}
+								>
+									{t.download.playSoon}
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
