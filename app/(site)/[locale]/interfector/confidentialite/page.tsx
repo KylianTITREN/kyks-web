@@ -156,18 +156,21 @@ export default async function InterfectorPrivacyPage({
 					<p>
 						Interfector is a social game: your nickname, your avatar and, if you provided them, your
 						first/last name and profile photo are visible to the{" "}
-						<strong>other players in your games</strong> (including the player whose target you
-						are). Game events (eliminations, resolved votes, end of game) are visible to all its
-						participants. Your target and your mission are <strong>never</strong> visible to other
-						players.
+						<strong>players you play or have played with</strong> (including the player whose target
+						you are). Players who have shared a game with you keep technical access to your profile
+						after that game ends, until you or they delete their account. Game events (eliminations,
+						resolved votes, end of game) are visible to all of the game's participants. Your target
+						and your mission are <strong>never</strong> visible to other players.
 					</p>
 				) : (
 					<p>
 						Interfector est un jeu social : votre pseudonyme, votre avatar et, si vous les avez
 						renseignés, votre prénom/nom et votre photo de profil sont visibles des{" "}
-						<strong>autres joueurs de vos parties</strong> (y compris du joueur dont vous êtes la
-						cible). Les événements de la partie (éliminations, votes résolus, fin de partie) sont
-						visibles de tous ses participants. Votre cible et votre mission ne sont{" "}
+						<strong>joueurs avec qui vous jouez ou avez joué</strong> (y compris du joueur dont vous
+						êtes la cible). Les joueurs ayant partagé une partie avec vous conservent techniquement
+						cet accès à votre profil après la fin de la partie, jusqu'à la suppression de votre
+						compte ou du leur. Les événements de la partie (éliminations, votes résolus, fin de
+						partie) sont visibles de tous ses participants. Votre cible et votre mission ne sont{" "}
 						<strong>jamais</strong> visibles des autres joueurs.
 					</p>
 				)}
@@ -190,7 +193,10 @@ export default async function InterfectorPrivacyPage({
 							</li>
 							<li>
 								<strong>RevenueCat</strong> — technical management of in-app purchases (never any
-								banking details).
+								banking details). RevenueCat, Inc. is established in the{" "}
+								<strong>United States</strong>: this transfer outside the European Union relies on
+								the European Commission's standard contractual clauses (Article 46 GDPR) and
+								concerns only minimal data (a technical identifier and your purchase history).
 							</li>
 						</ul>
 					</>
@@ -208,7 +214,10 @@ export default async function InterfectorPrivacyPage({
 							</li>
 							<li>
 								<strong>RevenueCat</strong> — gestion technique des achats intégrés (jamais de
-								données bancaires).
+								données bancaires). RevenueCat, Inc. est établie aux <strong>États-Unis</strong> :
+								ce transfert hors Union européenne repose sur les clauses contractuelles types de la
+								Commission européenne (art. 46 RGPD) et ne porte que sur des données minimales (un
+								identifiant technique et votre historique d'achats).
 							</li>
 						</ul>
 					</>
@@ -265,15 +274,22 @@ export default async function InterfectorPrivacyPage({
 			<LegalSection heading={isEn ? "7. Audience" : "7. Public concerné"}>
 				{isEn ? (
 					<p>
-						Interfector is a tongue-in-cheek party game, recommended for ages 13 and up. The
-						missions offered by the app exclude alcohol, dangerous dares and any non-consensual
-						physical contact.
+						Interfector is a tongue-in-cheek party game that we recommend for ages{" "}
+						<strong>13 and up</strong>. The app is rated 9+ on the App Store and "Everyone" by the
+						IARC on Google Play: these content ratings reflect the absence of shocking content, not
+						our recommendation. The app does not verify your age: we rely on the store ratings and
+						on the good judgement of players and parents. The missions offered by the app exclude
+						alcohol, dangerous dares and any non-consensual physical contact.
 					</p>
 				) : (
 					<p>
-						Interfector est un jeu d'ambiance au second degré, recommandé à partir de 13 ans. Les
-						missions proposées par l'application excluent l'alcool, les défis dangereux et tout
-						contact physique non consenti.
+						Interfector est un jeu d'ambiance au second degré que nous recommandons{" "}
+						<strong>à partir de 13 ans</strong>. L'application est classée 9+ sur l'App Store et «
+						Tous publics » par l'IARC sur Google Play : ces classifications reflètent l'absence de
+						contenu choquant, pas notre recommandation. L'application ne vérifie pas votre âge :
+						nous nous appuyons sur les classifications des stores et sur le bon sens des joueurs et
+						des parents. Les missions proposées par l'application excluent l'alcool, les défis
+						dangereux et tout contact physique non consenti.
 					</p>
 				)}
 			</LegalSection>
