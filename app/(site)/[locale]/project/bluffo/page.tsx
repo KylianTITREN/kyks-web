@@ -18,12 +18,19 @@ const publicSans = Public_Sans({
 	display: "swap",
 });
 
+const APP_STORE_ID = "6807730198";
+const APP_STORE_URL = `https://apps.apple.com/fr/app/id${APP_STORE_ID}`;
+
 export const metadata: Metadata = {
 	title: "Bluffo — Le jeu de soirée où l'on ment bien",
 	description:
 		"Bluffo, l'app mobile de bluff autour d'un seul téléphone : un seul dit la vérité, les autres inventent. Un projet KYKS.",
 	robots: { index: false, follow: false, noarchive: true, nosnippet: true },
 	alternates: { canonical: null },
+	itunes: {
+		appId: APP_STORE_ID,
+		appArgument: "https://kyks.io/project/bluffo",
+	},
 };
 
 type Storyboard = {
@@ -133,10 +140,10 @@ const COPY: Record<Locale, Copy> = {
 			{ label: "Encre & papier", detail: "Bitter + Public Sans, 13 écrans hi-fi." },
 			{ label: "FR / EN natifs", detail: "Des paquets écrits dans chaque langue, pas traduits." },
 		],
-		statusChip: "En développement",
+		statusChip: "Disponible",
 		statusTitle: "Statut",
 		statusBody:
-			"Bluffo est en développement. Prochaine étape : le moteur de jeu et les premiers paquets vérifiés, puis une bêta fermée avant l'App Store et le Play Store.",
+			"Bluffo est disponible sur l'App Store depuis septembre 2026. Prochaine étape : la version Android sur le Play Store.",
 		linksTitle: "En savoir plus",
 		viewLegal: "Conditions d'utilisation",
 		viewPrivacy: "Confidentialité",
@@ -145,7 +152,7 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Télécharger",
 			title: "Un téléphone. Une table. Un menteur.",
-			body: "Bientôt disponible sur iPhone et Android.",
+			body: "Disponible sur iPhone. Bientôt sur Android.",
 			appleOverline: "Télécharger sur",
 			appleLabel: "App Store",
 			playOverline: "Disponible sur",
@@ -221,10 +228,10 @@ const COPY: Record<Locale, Copy> = {
 			{ label: "Ink & paper", detail: "Bitter + Public Sans, 13 hi-fi screens." },
 			{ label: "Native FR / EN", detail: "Decks written in each language, not translated." },
 		],
-		statusChip: "In development",
+		statusChip: "Available",
 		statusTitle: "Status",
 		statusBody:
-			"Bluffo is in development. Next step: the game engine and the first checked decks, then a closed beta before the App Store and Play Store.",
+			"Bluffo has been on the App Store since September 2026. Next step: the Android version on the Play Store.",
 		linksTitle: "Learn more",
 		viewLegal: "Terms of use",
 		viewPrivacy: "Privacy",
@@ -233,7 +240,7 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Download",
 			title: "One phone. One table. One liar.",
-			body: "Coming soon on iPhone and Android.",
+			body: "Available on iPhone. Android coming soon.",
 			appleOverline: "Download on the",
 			appleLabel: "App Store",
 			playOverline: "Get it on",
@@ -313,12 +320,42 @@ function StoreBadge({
 	overline,
 	label,
 	soon,
+	href,
 }: {
 	kind: "apple" | "play";
 	overline: string;
 	label: string;
-	soon: string;
+	/** Pastille « Bientôt » — attendue quand le badge n'a pas de `href`. */
+	soon?: string;
+	/** Fourni quand le store est ouvert : le badge devient un lien. */
+	href?: string;
 }) {
+	const logo = kind === "apple" ? <AppleLogo size={28} /> : <GooglePlayLogo size={28} />;
+
+	if (href) {
+		return (
+			<a
+				href={href}
+				target="_blank"
+				rel="noreferrer noopener"
+				className="group inline-flex flex-1 items-center gap-3 rounded-[4px] px-5 py-3 transition-transform hover:-translate-y-0.5"
+				style={{ background: PAPER, color: INK }}
+				aria-label={`${overline} ${label}`}
+			>
+				{logo}
+				<span className="flex flex-col leading-tight">
+					<span
+						className="text-[10px] font-medium uppercase tracking-[0.16em]"
+						style={{ color: `${INK}CC` }}
+					>
+						{overline}
+					</span>
+					<span className="text-xl font-bold tracking-[-0.01em]">{label}</span>
+				</span>
+			</a>
+		);
+	}
+
 	return (
 		<div
 			className="relative inline-flex flex-1 cursor-not-allowed items-center gap-3 rounded-[4px] border px-5 py-3"
@@ -326,7 +363,7 @@ function StoreBadge({
 			aria-disabled="true"
 			aria-label={`${label} — ${soon}`}
 		>
-			{kind === "apple" ? <AppleLogo size={28} /> : <GooglePlayLogo size={28} />}
+			{logo}
 			<span className="flex flex-col leading-tight">
 				<span
 					className="text-[10px] font-medium uppercase tracking-[0.16em]"
@@ -661,7 +698,7 @@ export default async function BluffoProjectPage({
 								kind="apple"
 								overline={t.download.appleOverline}
 								label={t.download.appleLabel}
-								soon={t.download.soon}
+								href={APP_STORE_URL}
 							/>
 							<StoreBadge
 								kind="play"
