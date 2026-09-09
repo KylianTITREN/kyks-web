@@ -48,7 +48,10 @@
 	"footer": {
 		"tagline": "Tech studio — Paris, remote.",
 		"rights": "All rights reserved.",
-		"credits": "Designed & built by KYKS."
+		"credits": "Designed & built by KYKS.",
+		"followUs": "Follow KYKS",
+		"linkedin": "LinkedIn — KYKS company page",
+		"facebook": "Facebook — KYKS page"
 	},
 	"consent": {
 		"title": "Cookies & analytics",

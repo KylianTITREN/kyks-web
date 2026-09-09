@@ -633,7 +633,8 @@ export default async function BluffoProjectPage({
 
 				{/* DOWNLOAD BADGES */}
 				<div
-					className="mt-24 rounded-[6px] border p-8 md:p-12"
+					id="download"
+					className="mt-24 scroll-mt-24 rounded-[6px] border p-8 md:p-12"
 					style={{ borderColor: DIVIDER, background: SURFACE }}
 				>
 					<div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16">

@@ -48,7 +48,10 @@
 	"footer": {
 		"tagline": "Studio tech — Paris, remote.",
 		"rights": "Tous droits réservés.",
-		"credits": "Conçu & développé par KYKS."
+		"credits": "Conçu & développé par KYKS.",
+		"followUs": "Suivez KYKS",
+		"linkedin": "LinkedIn — page entreprise KYKS",
+		"facebook": "Facebook — page KYKS"
 	},
 	"consent": {
 		"title": "Cookies & mesure d'audience",
