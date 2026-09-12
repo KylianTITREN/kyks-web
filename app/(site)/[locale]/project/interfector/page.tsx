@@ -6,6 +6,7 @@ import Link from "next/link";
 
 const APP_STORE_ID = "6806593700";
 const APP_STORE_URL = `https://apps.apple.com/fr/app/id${APP_STORE_ID}`;
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.kyks.games.interfector";
 
 export const metadata: Metadata = {
 	title: "Interfector — Le jeu du Killer",
@@ -54,7 +55,6 @@ type Copy = {
 		appleLabel: string;
 		playOverline: string;
 		playLabel: string;
-		playSoon: string;
 	};
 };
 
@@ -129,8 +129,8 @@ const COPY: Record<Locale, Copy> = {
 		],
 		statusTitle: "Statut",
 		statusBody:
-			"Interfector est en développement actif. Prochaine étape : bêta fermée avant dépôt sur l'App Store et le Play Store.",
-		statusChip: "En développement",
+			"Interfector est disponible sur l'App Store et le Play Store.",
+		statusChip: "Disponible",
 		linksTitle: "En savoir plus",
 		backToKyks: "Retour sur kyks.io",
 		viewLegal: "Conditions & confidentialité",
@@ -139,12 +139,11 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Télécharger",
 			title: "Prends l'app. Lance ta première partie.",
-			body: "Disponible dès maintenant sur iPhone. Version Android en préparation.",
+			body: "Disponible sur iPhone et Android.",
 			appleOverline: "Télécharger sur",
 			appleLabel: "App Store",
 			playOverline: "Disponible sur",
 			playLabel: "Google Play",
-			playSoon: "Bientôt",
 		},
 	},
 	en: {
@@ -217,8 +216,8 @@ const COPY: Record<Locale, Copy> = {
 		],
 		statusTitle: "Status",
 		statusBody:
-			"Interfector is in active development. Next step: closed beta before hitting the App Store and Play Store.",
-		statusChip: "In development",
+			"Interfector is available on the App Store and Play Store.",
+		statusChip: "Available",
 		linksTitle: "Learn more",
 		backToKyks: "Back to kyks.io",
 		viewLegal: "Terms & privacy",
@@ -227,12 +226,11 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Download",
 			title: "Grab the app. Run your first round.",
-			body: "Live on iPhone. Android version in the works.",
+			body: "Available on iPhone and Android.",
 			appleOverline: "Download on the",
 			appleLabel: "App Store",
 			playOverline: "Get it on",
 			playLabel: "Google Play",
-			playSoon: "Coming soon",
 		},
 	},
 };
@@ -626,36 +624,27 @@ export default async function InterfectorProjectPage({
 								</span>
 							</a>
 
-							<div
-								className="relative inline-flex flex-1 cursor-not-allowed items-center gap-3 rounded-2xl border px-5 py-3"
-								style={{
-									borderColor: DIVIDER,
-									background: SURFACE_ALT,
-									color: MUTED,
-									opacity: 0.7,
-								}}
-								aria-disabled="true"
-								aria-label={`${t.download.playLabel} — ${t.download.playSoon}`}
+							<a
+								href={PLAY_STORE_URL}
+								target="_blank"
+								rel="noreferrer noopener"
+								className="group inline-flex flex-1 items-center gap-3 rounded-2xl px-5 py-3 transition-transform hover:-translate-y-0.5"
+								style={{ background: TEXT, color: BG }}
+								aria-label={`${t.download.playOverline} ${t.download.playLabel}`}
 							>
 								<GooglePlayLogo size={28} />
 								<span className="flex flex-col leading-tight">
 									<span
 										className="text-[10px] font-medium uppercase tracking-[0.16em]"
-										style={{ color: SUBTLE }}
+										style={{ color: `${BG}CC` }}
 									>
 										{t.download.playOverline}
 									</span>
-									<span className="text-xl font-bold tracking-[-0.01em]" style={{ color: TEXT }}>
+									<span className="text-xl font-bold tracking-[-0.01em]">
 										{t.download.playLabel}
 									</span>
 								</span>
-								<span
-									className="absolute -top-2 right-3 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em]"
-									style={{ background: ACCENT, color: TEXT }}
-								>
-									{t.download.playSoon}
-								</span>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>

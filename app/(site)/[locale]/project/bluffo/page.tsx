@@ -20,6 +20,7 @@ const publicSans = Public_Sans({
 
 const APP_STORE_ID = "6807730198";
 const APP_STORE_URL = `https://apps.apple.com/fr/app/id${APP_STORE_ID}`;
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.kyks.games.bluffo";
 
 export const metadata: Metadata = {
 	title: "Bluffo — Le jeu de soirée où l'on ment bien",
@@ -67,7 +68,6 @@ type Copy = {
 		appleLabel: string;
 		playOverline: string;
 		playLabel: string;
-		soon: string;
 	};
 	credits: string;
 };
@@ -143,7 +143,7 @@ const COPY: Record<Locale, Copy> = {
 		statusChip: "Disponible",
 		statusTitle: "Statut",
 		statusBody:
-			"Bluffo est disponible sur l'App Store depuis septembre 2026. Prochaine étape : la version Android sur le Play Store.",
+			"Bluffo est disponible sur l'App Store et le Play Store depuis septembre 2026.",
 		linksTitle: "En savoir plus",
 		viewLegal: "Conditions d'utilisation",
 		viewPrivacy: "Confidentialité",
@@ -152,12 +152,11 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Télécharger",
 			title: "Un téléphone. Une table. Un menteur.",
-			body: "Disponible sur iPhone. Bientôt sur Android.",
+			body: "Disponible sur iPhone et Android.",
 			appleOverline: "Télécharger sur",
 			appleLabel: "App Store",
 			playOverline: "Disponible sur",
 			playLabel: "Google Play",
-			soon: "Bientôt",
 		},
 		credits: "Design, code et direction produit : Kylian Titren pour KYKS.",
 	},
@@ -231,7 +230,7 @@ const COPY: Record<Locale, Copy> = {
 		statusChip: "Available",
 		statusTitle: "Status",
 		statusBody:
-			"Bluffo has been on the App Store since September 2026. Next step: the Android version on the Play Store.",
+			"Bluffo has been on the App Store and Play Store since September 2026.",
 		linksTitle: "Learn more",
 		viewLegal: "Terms of use",
 		viewPrivacy: "Privacy",
@@ -240,12 +239,11 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Download",
 			title: "One phone. One table. One liar.",
-			body: "Available on iPhone. Android coming soon.",
+			body: "Available on iPhone and Android.",
 			appleOverline: "Download on the",
 			appleLabel: "App Store",
 			playOverline: "Get it on",
 			playLabel: "Google Play",
-			soon: "Coming soon",
 		},
 		credits: "Design, code and product direction by Kylian Titren for KYKS.",
 	},
@@ -704,7 +702,7 @@ export default async function BluffoProjectPage({
 								kind="play"
 								overline={t.download.playOverline}
 								label={t.download.playLabel}
-								soon={t.download.soon}
+								href={PLAY_STORE_URL}
 							/>
 						</div>
 					</div>
