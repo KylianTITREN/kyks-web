@@ -32,6 +32,12 @@ export default async function IntrusPrivacyPage({
 		</a>
 	);
 
+	const accountLink = (
+		<a className="text-accent hover:underline" href={`/${locale}/intrus/compte`}>
+			{isEn ? "Account deletion" : "Suppression de compte"}
+		</a>
+	);
+
 	const cnilLink = (
 		<a
 			className="text-accent hover:underline"
@@ -52,7 +58,7 @@ export default async function IntrusPrivacyPage({
 					? "How INTRUS collects, uses and protects your personal data."
 					: "Comment INTRUS collecte, utilise et protège vos données personnelles."
 			}
-			lastUpdated={isEn ? "September 25, 2026" : "25 septembre 2026"}
+			lastUpdated={isEn ? "September 26, 2026" : "26 septembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			{isEn ? (
@@ -503,25 +509,30 @@ export default async function IntrusPrivacyPage({
 				{isEn ? (
 					<ul className="flex list-disc flex-col gap-2 pl-5">
 						<li>
-							<strong>Account, game identity and progression</strong>: until you ask us to delete
-							your account (see section 11).
+							<strong>Account, game identity and progression</strong>: as long as your account
+							exists, i.e. until you delete it from the app or ask us to (see section 11).
 						</li>
 						<li>
-							<strong>Games</strong>: kept with their summary, timeline and the players' game data
-							for the history of the room, without a set time limit; when you ask us to delete your
-							account, your player data is removed from them.
+							<strong>Ended games</strong>: kept with their summary, timeline and the players' game
+							data for the history of the room, then <strong>automatically erased 90 days</strong>{" "}
+							after the end of the game, together with all of their data. When you delete your
+							account, your player data is anonymised in them straight away.
 						</li>
 						<li>
-							<strong>Purchase log</strong>: until you ask us to delete your account, then for the
-							legal retention period of accounting records, in a form that no longer identifies you.
+							<strong>Rooms that never started</strong>: automatically erased{" "}
+							<strong>7 days</strong> after their creation.
+						</li>
+						<li>
+							<strong>Purchase log</strong>: as long as your account exists, then for the legal
+							retention period of accounting records, in a form that no longer identifies you.
 						</li>
 						<li>
 							<strong>Notification token</strong>: replaced each time your phone renews it, erased
 							when your account is deleted.
 						</li>
 						<li>
-							<strong>Bluetooth tokens</strong>: specific to one game and kept with it (see Games);
-							proximity measurements are never stored.
+							<strong>Bluetooth tokens</strong>: specific to one game and kept with it (see Ended
+							games); proximity measurements are never stored.
 						</li>
 						<li>
 							<strong>Local settings</strong>: on your device until you uninstall the app.
@@ -530,18 +541,25 @@ export default async function IntrusPrivacyPage({
 				) : (
 					<ul className="flex list-disc flex-col gap-2 pl-5">
 						<li>
-							<strong>Compte, identité de jeu et progression</strong> : jusqu'à ce que vous nous
-							demandiez la suppression de votre compte (voir la section 11).
+							<strong>Compte, identité de jeu et progression</strong> : tant que votre compte
+							existe, c'est-à-dire jusqu'à ce que vous le supprimiez depuis l'application ou nous le
+							demandiez (voir la section 11).
 						</li>
 						<li>
-							<strong>Parties</strong> : conservées avec leur résumé, leur chronologie et les
-							données de partie des joueurs pour l'historique du salon, sans durée fixée ; lorsque
-							vous demandez la suppression de votre compte, vos données de joueur en sont retirées.
+							<strong>Parties terminées</strong> : conservées avec leur résumé, leur chronologie et
+							les données de partie des joueurs pour l'historique du salon, puis{" "}
+							<strong>effacées automatiquement 90 jours</strong> après la fin de la partie, avec
+							l'ensemble de leurs données. Lorsque vous supprimez votre compte, vos données de
+							joueur y sont anonymisées immédiatement.
 						</li>
 						<li>
-							<strong>Journal d'achats</strong> : jusqu'à la suppression de votre compte, puis
-							pendant la durée légale de conservation des pièces comptables, sous une forme qui ne
-							vous identifie plus.
+							<strong>Salons jamais démarrés</strong> : effacés automatiquement{" "}
+							<strong>7 jours</strong> après leur création.
+						</li>
+						<li>
+							<strong>Journal d'achats</strong> : tant que votre compte existe, puis pendant la
+							durée légale de conservation des pièces comptables, sous une forme qui ne vous
+							identifie plus.
 						</li>
 						<li>
 							<strong>Jeton de notification</strong> : remplacé à chaque renouvellement par votre
@@ -549,7 +567,7 @@ export default async function IntrusPrivacyPage({
 						</li>
 						<li>
 							<strong>Jetons Bluetooth</strong> : propres à une partie et conservés avec elle (voir
-							Parties) ; les mesures de proximité ne sont jamais stockées.
+							Parties terminées) ; les mesures de proximité ne sont jamais stockées.
 						</li>
 						<li>
 							<strong>Réglages locaux</strong> : sur votre appareil jusqu'à la désinstallation de
@@ -620,15 +638,19 @@ export default async function IntrusPrivacyPage({
 							</li>
 						</ul>
 						<p>
-							To delete your account, write to us at {mailLink}. So that we can find your account,
-							tell us the e-mail address of the Apple account you linked or, for an anonymous
-							account, your nickname and the code of a room you played in recently, sent from the
-							phone that holds the account. Within <strong>30 days</strong>, we will erase your
-							authentication account, your profile, your progression and your purchase log, and
-							remove your player data from your games. You can also, on your own: uninstall the app
-							(this erases the local settings and the anonymous session of this phone), revoke "Sign
-							in with Apple" for INTRUS in your Apple ID settings, and manage or cancel your INTRUS+
-							subscription from your Apple account.
+							To delete your account, open the app and go to{" "}
+							<strong>Profile → Account → Delete my account</strong>. The effect is immediate: your
+							authentication account, your profile, your progression and your purchase log are
+							erased, your player data is anonymised in your ended games and the app restarts with a
+							new anonymous profile. If you no longer have access to the app, write to us at{" "}
+							{mailLink}: so that we can find your account, tell us the e-mail address of the Apple
+							account you linked or, for an anonymous account, your nickname and the code of a room
+							you played in recently, sent from the phone that holds the account, and we will handle
+							the request within <strong>30 days</strong>. Deleting your account does not cancel an
+							ongoing INTRUS+ subscription: manage or cancel it from your Apple account. You can
+							also, on your own: uninstall the app (this erases the local settings and the anonymous
+							session of this phone) and revoke "Sign in with Apple" for INTRUS in your Apple ID
+							settings. Details on the {accountLink} page.
 						</p>
 						<p>
 							To exercise any of these rights, write to us at {mailLink}. You may also lodge a
@@ -647,16 +669,21 @@ export default async function IntrusPrivacyPage({
 							</li>
 						</ul>
 						<p>
-							Pour supprimer votre compte, écrivez-nous à {mailLink}. Pour que nous puissions
-							retrouver votre compte, indiquez l'adresse e-mail du compte Apple rattaché ou, pour un
-							compte anonyme, votre pseudo et le code d'un salon dans lequel vous avez joué
-							récemment, depuis le téléphone qui porte le compte. Sous <strong>30 jours</strong>,
-							nous effacerons votre compte d'authentification, votre profil, votre progression et
-							votre journal d'achats, et retirerons vos données de joueur de vos parties. Vous
-							pouvez aussi, de votre côté : désinstaller l'application (ce qui efface les réglages
-							locaux et la session anonyme de ce téléphone), révoquer « Se connecter avec Apple »
-							pour INTRUS dans les réglages de votre identifiant Apple, et gérer ou résilier votre
-							abonnement INTRUS+ depuis votre compte Apple.
+							Pour supprimer votre compte, ouvrez l'application puis{" "}
+							<strong>Profil → Compte → Supprimer mon compte</strong>. L'effet est immédiat : votre
+							compte d'authentification, votre profil, votre progression et votre journal d'achats
+							sont effacés, vos données de joueur sont anonymisées dans vos parties terminées et
+							l'application redémarre avec un nouveau profil anonyme. Si vous n'avez plus accès à
+							l'application, écrivez-nous à {mailLink} : pour que nous puissions retrouver votre
+							compte, indiquez l'adresse e-mail du compte Apple rattaché ou, pour un compte anonyme,
+							votre pseudo et le code d'un salon dans lequel vous avez joué récemment, depuis le
+							téléphone qui porte le compte, et nous traiterons la demande sous{" "}
+							<strong>30 jours</strong>. La suppression du compte ne résilie pas un abonnement
+							INTRUS+ en cours : gérez-le ou résiliez-le depuis votre compte Apple. Vous pouvez
+							aussi, de votre côté : désinstaller l'application (ce qui efface les réglages locaux
+							et la session anonyme de ce téléphone) et révoquer « Se connecter avec Apple » pour
+							INTRUS dans les réglages de votre identifiant Apple. Détails sur la page {accountLink}
+							.
 						</p>
 						<p>
 							Pour exercer l'un de ces droits, écrivez-nous à {mailLink}. Vous pouvez également
