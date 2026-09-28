@@ -58,7 +58,7 @@ export default async function IntrusPrivacyPage({
 					? "How INTRUS collects, uses and protects your personal data."
 					: "Comment INTRUS collecte, utilise et protège vos données personnelles."
 			}
-			lastUpdated={isEn ? "September 26, 2026" : "26 septembre 2026"}
+			lastUpdated={isEn ? "September 28, 2026" : "28 septembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			{isEn ? (
@@ -67,7 +67,7 @@ export default async function IntrusPrivacyPage({
 					game made famous by Among Us into real life: friends gather in a house, each with their
 					own phone. The host opens a room and lists its rooms, the others join with a 4-character
 					code, pick a nickname and an avatar, then privately learn their role. Crewmates complete
-					missions around the house while impostors eliminate them; reporting a body or calling an
+					missions around the house while intruders eliminate them; reporting a body or calling an
 					emergency meeting starts a timed debate and a vote. A Bluetooth radar tells you who is
 					nearby. This page explains what data we process, why, and what your rights are, in
 					accordance with the General Data Protection Regulation (GDPR).
@@ -79,7 +79,7 @@ export default async function IntrusPrivacyPage({
 					dans une maison, chacun avec son téléphone. L'hôte ouvre un salon et y déclare les pièces,
 					les autres rejoignent avec un code à 4 caractères, choisissent un pseudo et un avatar,
 					puis découvrent en privé leur rôle. Les équipiers accomplissent des missions dans la
-					maison pendant que les imposteurs les éliminent ; signaler un corps ou déclencher une
+					maison pendant que les intrus les éliminent ; signaler un corps ou déclencher une
 					réunion d'urgence lance un débat chronométré et un vote. Un radar Bluetooth indique qui se
 					trouve à proximité. Cette page explique quelles données nous traitons, pourquoi, et quels
 					sont vos droits, conformément au Règlement général sur la protection des données (RGPD).
@@ -149,12 +149,19 @@ export default async function IntrusPrivacyPage({
 								section 5).
 							</li>
 							<li>
+								<strong>Diagnostics</strong>: when the app crashes or hits an unexpected error, a
+								technical report (stack trace, device model and OS version, app version and build,
+								your anonymous account identifier) is sent to Google Firebase Crashlytics so we can
+								fix the bug. These reports contain no nickname, no game content and no location.
+							</li>
+							<li>
 								<strong>Local settings</strong>: sound, haptics and animated-eyes preferences,
 								stored on your device only and never sent to us.
 							</li>
 						</ul>
 						<p>
-							INTRUS embeds no advertising, analytics, crash-reporting or tracking SDK. We do not
+							INTRUS embeds no advertising, audience-measurement or tracking SDK; its only diagnostic
+							tool is the crash reporting described above. We do not
 							collect your location, contacts, photos, camera or microphone, and the app does not
 							store any file or profile picture.
 						</p>
@@ -207,13 +214,20 @@ export default async function IntrusPrivacyPage({
 								votre téléphone uniquement (voir la section 5).
 							</li>
 							<li>
+								<strong>Diagnostic</strong> : en cas de plantage ou d'erreur inattendue, un rapport
+								technique (trace d'exécution, modèle et version du système, version et numéro de
+								build de l'application, identifiant de votre compte anonyme) est envoyé à Google
+								Firebase Crashlytics pour que nous puissions corriger le bug. Ces rapports ne
+								contiennent ni pseudo, ni contenu de partie, ni position.
+							</li>
+							<li>
 								<strong>Réglages locaux</strong> : préférences de son, de vibrations et d'yeux
 								animés, stockées sur votre appareil uniquement et jamais transmises.
 							</li>
 						</ul>
 						<p>
-							INTRUS n'embarque aucun SDK publicitaire, de mesure d'audience, de rapport de plantage
-							ni de pistage. Nous ne collectons ni votre position, ni vos contacts, ni vos photos,
+							INTRUS n'embarque aucun SDK publicitaire, de mesure d'audience ni de pistage ; son seul
+							outil de diagnostic est le rapport de plantage décrit ci-dessus. Nous ne collectons ni votre position, ni vos contacts, ni vos photos,
 							ni votre caméra ou micro, et l'application ne stocke aucun fichier ni photo de profil.
 						</p>
 					</>
@@ -257,6 +271,10 @@ export default async function IntrusPrivacyPage({
 							authenticated purchase webhooks, technical logs): our legitimate interest in keeping
 							games honest and the service reliable.
 						</li>
+						<li>
+							<strong>App stability</strong> (crash and error reports): our legitimate interest in
+							finding and fixing bugs.
+						</li>
 					</ul>
 				) : (
 					<ul className="flex list-disc flex-col gap-2 pl-5">
@@ -294,6 +312,10 @@ export default async function IntrusPrivacyPage({
 							authentification des webhooks d'achat, journaux techniques) : notre intérêt légitime à
 							garder les parties honnêtes et le service fiable.
 						</li>
+						<li>
+							<strong>Stabilité de l'application</strong> (rapports de plantage et d'erreur) : notre
+							intérêt légitime à trouver et corriger les bugs.
+						</li>
 					</ul>
 				)}
 			</LegalSection>
@@ -310,7 +332,7 @@ export default async function IntrusPrivacyPage({
 						ended, the roles of every player and the event timeline (who eliminated whom) are
 						revealed to the members of the room. If the host enables the corresponding option, the
 						role of an ejected player is revealed at the end of the vote. Individual votes are never
-						readable by any player — only the totals are. Impostors, and every player when the host
+						readable by any player — only the totals are. Intruders, and every player when the host
 						enables the "unmasked radar" option, can see the names of nearby players; otherwise the
 						radar is anonymous.
 					</p>
@@ -324,7 +346,7 @@ export default async function IntrusPrivacyPage({
 						de tous les joueurs et la chronologie (qui a éliminé qui) sont révélés aux membres du
 						salon. Si l'hôte active l'option correspondante, le rôle d'un joueur éjecté est révélé à
 						l'issue du vote. Les votes individuels ne sont jamais lisibles par aucun joueur — seuls
-						les totaux le sont. Les imposteurs, ainsi que tous les joueurs lorsque l'hôte active
+						les totaux le sont. Les intrus, ainsi que tous les joueurs lorsque l'hôte active
 						l'option « radar nominatif », voient le nom des joueurs proches ; sinon le radar est
 						anonyme.
 					</p>
@@ -345,7 +367,7 @@ export default async function IntrusPrivacyPage({
 							The token is generated by our server and kept in your private game data (it is what
 							lets your phone match a received token with a player of the room). Proximity itself is
 							computed <strong>on your phone only</strong>: signal strength, zones and encounters
-							are never sent to our servers or stored. When an impostor eliminates a player, the app
+							are never sent to our servers or stored. When an intruder eliminates a player, the app
 							only sends the target's identifier. The token changes with every game and is not
 							reused outside of it.
 						</p>
@@ -371,7 +393,7 @@ export default async function IntrusPrivacyPage({
 							(c'est ce qui permet à votre téléphone de faire correspondre un jeton reçu avec un
 							joueur du salon). La proximité elle-même est calculée{" "}
 							<strong>sur votre téléphone uniquement</strong> : la puissance du signal, les zones et
-							les rencontres ne sont jamais envoyées à nos serveurs ni stockées. Lorsqu'un imposteur
+							les rencontres ne sont jamais envoyées à nos serveurs ni stockées. Lorsqu'un intrus
 							élimine un joueur, l'application n'envoie que l'identifiant de la cible. Le jeton
 							change à chaque partie et n'est pas réutilisé en dehors d'elle.
 						</p>
@@ -443,6 +465,10 @@ export default async function IntrusPrivacyPage({
 								token and the text of each notification.
 							</li>
 							<li>
+								<strong>Google Firebase Crashlytics</strong> — crash and error reports (stack trace,
+								device and OS, app version, anonymous account identifier), kept 90 days.
+							</li>
+							<li>
 								<strong>Apple</strong> — Sign in with Apple (if you link your account), processing
 								of in-app purchases and delivery of notifications on iOS.
 							</li>
@@ -478,6 +504,11 @@ export default async function IntrusPrivacyPage({
 								<strong>Google Firebase Cloud Messaging</strong> — acheminement des notifications de
 								partie vers le service de notification d'Apple (iOS) et vers Android : Google voit
 								votre jeton de notification et le texte de chaque notification.
+							</li>
+							<li>
+								<strong>Google Firebase Crashlytics</strong> — rapports de plantage et d'erreur
+								(trace d'exécution, appareil et système, version de l'application, identifiant de
+								compte anonyme), conservés 90 jours.
 							</li>
 							<li>
 								<strong>Apple</strong> — Se connecter avec Apple (si vous rattachez votre compte),
@@ -535,6 +566,9 @@ export default async function IntrusPrivacyPage({
 							games); proximity measurements are never stored.
 						</li>
 						<li>
+							<strong>Crash reports</strong>: 90 days at Google Firebase Crashlytics.
+						</li>
+						<li>
 							<strong>Local settings</strong>: on your device until you uninstall the app.
 						</li>
 					</ul>
@@ -568,6 +602,9 @@ export default async function IntrusPrivacyPage({
 						<li>
 							<strong>Jetons Bluetooth</strong> : propres à une partie et conservés avec elle (voir
 							Parties terminées) ; les mesures de proximité ne sont jamais stockées.
+						</li>
+						<li>
+							<strong>Rapports de plantage</strong> : 90 jours chez Google Firebase Crashlytics.
 						</li>
 						<li>
 							<strong>Réglages locaux</strong> : sur votre appareil jusqu'à la désinstallation de
@@ -639,7 +676,7 @@ export default async function IntrusPrivacyPage({
 						</ul>
 						<p>
 							To delete your account, open the app and go to{" "}
-							<strong>Profile → Account → Delete my account</strong>. The effect is immediate: your
+							<strong>Profile → Settings (gear icon) → Delete my account</strong>. The effect is immediate: your
 							authentication account, your profile, your progression and your purchase log are
 							erased, your player data is anonymised in your ended games and the app restarts with a
 							new anonymous profile. If you no longer have access to the app, write to us at{" "}
@@ -670,7 +707,7 @@ export default async function IntrusPrivacyPage({
 						</ul>
 						<p>
 							Pour supprimer votre compte, ouvrez l'application puis{" "}
-							<strong>Profil → Compte → Supprimer mon compte</strong>. L'effet est immédiat : votre
+							<strong>Profil → Réglages (roue dentée) → Supprimer mon compte</strong>. L'effet est immédiat : votre
 							compte d'authentification, votre profil, votre progression et votre journal d'achats
 							sont effacés, vos données de joueur sont anonymisées dans vos parties terminées et
 							l'application redémarre avec un nouveau profil anonyme. Si vous n'avez plus accès à

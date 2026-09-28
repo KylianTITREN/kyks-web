@@ -47,7 +47,7 @@ export default async function IntrusAccountDeletionPage({
 					? "How to delete your INTRUS account and all of your data."
 					: "Comment supprimer votre compte INTRUS et l'ensemble de vos données."
 			}
-			lastUpdated={isEn ? "September 26, 2026" : "26 septembre 2026"}
+			lastUpdated={isEn ? "September 28, 2026" : "28 septembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			<LegalSection
@@ -56,7 +56,7 @@ export default async function IntrusAccountDeletionPage({
 				{isEn ? (
 					<>
 						<p>
-							Open INTRUS, then <strong>Profile → Account → Delete my account</strong> and confirm.
+							Open INTRUS, then <strong>Profile → Settings (gear icon) → Delete my account</strong> and confirm.
 							Deletion is <strong>immediate and permanent</strong>: the app signs you out and
 							restarts with a brand-new anonymous profile, as on first launch. This works for both
 							anonymous profiles and profiles linked with Sign in with Apple.
@@ -69,7 +69,7 @@ export default async function IntrusAccountDeletionPage({
 				) : (
 					<>
 						<p>
-							Ouvrez INTRUS puis <strong>Profil → Compte → Supprimer mon compte</strong> et
+							Ouvrez INTRUS puis <strong>Profil → Réglages (roue dentée) → Supprimer mon compte</strong> et
 							confirmez. La suppression est <strong>immédiate et définitive</strong> : l'application
 							vous déconnecte et redémarre avec un nouveau profil anonyme, comme au premier
 							lancement. Cela vaut aussi bien pour un profil anonyme que pour un profil rattaché

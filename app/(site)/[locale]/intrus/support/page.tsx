@@ -32,7 +32,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Combien de joueurs ?",
-			a: "De 3 à 15 joueurs, tous au même endroit, chacun avec son téléphone. L'hôte règle le nombre d'imposteurs, le nombre de missions par joueur, la durée de la partie et les options avancées (réunions d'urgence, temps de débat et de vote, votes anonymes…).",
+			a: "De 4 à 13 joueurs, tous au même endroit, chacun avec son téléphone. L'hôte règle le nombre d'intrus, le nombre de missions par joueur, la durée de la partie et les options avancées (réunions d'urgence, temps de débat et de vote, votes anonymes…).",
 		},
 		{
 			q: "Faut-il le Bluetooth ?",
@@ -40,7 +40,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Faut-il créer un compte ?",
-			a: "Non. Au premier lancement, INTRUS crée un profil anonyme lié à ce téléphone : aucune adresse e-mail ni mot de passe. Pour retrouver votre progression (niveau, sonars, cosmétiques) sur un autre appareil ou après une réinstallation, ouvrez Profil → Compte → Continuer avec Apple, puis connectez-vous de la même façon ailleurs.",
+			a: "Non. Au premier lancement, INTRUS crée un profil anonyme lié à ce téléphone : aucune adresse e-mail ni mot de passe. Pour retrouver votre progression (niveau, sonars, cosmétiques) sur un autre appareil ou après une réinstallation, touchez « Lier » sur votre Profil (ou Profil → Réglages → Continuer avec Apple), puis connectez-vous de la même façon ailleurs.",
 		},
 		{
 			q: "Qu'est-ce qu'INTRUS+ et l'essai gratuit ?",
@@ -64,7 +64,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Supprimer mon compte ?",
-			a: "Depuis l'application : Profil → Compte → Supprimer mon compte. L'effacement est immédiat et définitif. Tout est détaillé sur la page",
+			a: "Depuis l'application : Profil → Réglages (roue dentée) → Supprimer mon compte. L'effacement est immédiat et définitif. Tout est détaillé sur la page",
 			link: { path: ACCOUNT_PATH, label: "Suppression de compte" },
 		},
 		{
@@ -79,7 +79,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "How many players?",
-			a: "From 3 to 15 players, all in the same place, each with their own phone. The host sets the number of impostors, the number of missions per player, the game duration and the advanced options (emergency meetings, discussion and voting time, anonymous votes…).",
+			a: "From 4 to 13 players, all in the same place, each with their own phone. The host sets the number of intruders, the number of missions per player, the game duration and the advanced options (emergency meetings, discussion and voting time, anonymous votes…).",
 		},
 		{
 			q: "Is Bluetooth required?",
@@ -87,7 +87,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Do I need an account?",
-			a: "No. On first launch, INTRUS creates an anonymous profile tied to this phone: no e-mail address, no password. To get your progression (level, sonars, cosmetics) back on another device or after reinstalling, open Profile → Account → Continue with Apple, then sign in the same way elsewhere.",
+			a: "No. On first launch, INTRUS creates an anonymous profile tied to this phone: no e-mail address, no password. To get your progression (level, sonars, cosmetics) back on another device or after reinstalling, tap “Link” on your Profile (or Profile → Settings → Continue with Apple), then sign in the same way elsewhere.",
 		},
 		{
 			q: "What are INTRUS+ and the free trial?",
@@ -111,7 +111,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Delete my account?",
-			a: "From the app: Profile → Account → Delete my account. Erasure is immediate and permanent. Everything is detailed on the",
+			a: "From the app: Profile → Settings (gear icon) → Delete my account. Erasure is immediate and permanent. Everything is detailed on the",
 			link: { path: ACCOUNT_PATH, label: "Account deletion" },
 		},
 		{
@@ -135,10 +135,10 @@ export default async function IntrusSupportPage({
 			title="Support"
 			subtitle={
 				isEn
-					? "A question, a bug, an impostor who swears they're innocent? We're here."
-					: "Une question, un bug, un imposteur qui jure qu'il est innocent ? On est là."
+					? "A question, a bug, an intruder who swears they're innocent? We're here."
+					: "Une question, un bug, un intrus qui jure qu'il est innocent ? On est là."
 			}
-			lastUpdated={isEn ? "September 26, 2026" : "26 septembre 2026"}
+			lastUpdated={isEn ? "September 28, 2026" : "28 septembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			<LegalSection heading={isEn ? "Contact us" : "Nous contacter"}>
