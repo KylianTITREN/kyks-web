@@ -583,9 +583,9 @@ export default async function IntrusPrivacyPage({
 							<strong>Ended games</strong>: kept with their summary, timeline and the players' game
 							data for the history of the room, then <strong>automatically erased 90 days</strong>{" "}
 							after the end of the game, together with all of their data. When you delete your
-							account, your player data is anonymised in them straight away; your pseudonymous
-							account identifier, as well as your nickname in the private game data of other players
-							(radar list), remain in them until they are erased.
+							account, your player data is anonymised in them straight away; your nickname is
+							replaced everywhere, including in the private game data of other players, and only
+							your pseudonymous account identifier remains in them until they are erased.
 						</li>
 						<li>
 							<strong>Rooms that never started</strong>: automatically erased{" "}
@@ -625,9 +625,9 @@ export default async function IntrusPrivacyPage({
 							les données de partie des joueurs pour l'historique du salon, puis{" "}
 							<strong>effacées automatiquement 90 jours</strong> après la fin de la partie, avec
 							l'ensemble de leurs données. Lorsque vous supprimez votre compte, vos données de
-							joueur y sont anonymisées immédiatement ; l'identifiant pseudonyme de votre compte,
-							ainsi que votre pseudo dans les données privées de partie d'autres joueurs (liste du
-							radar), y subsistent jusqu'à leur effacement.
+							joueur y sont anonymisées immédiatement ; votre pseudo est remplacé partout, y compris
+							dans les données privées de partie des autres joueurs, et seul l'identifiant
+							pseudonyme de votre compte y subsiste jusqu'à leur effacement.
 						</li>
 						<li>
 							<strong>Salons jamais démarrés</strong> : effacés automatiquement{" "}

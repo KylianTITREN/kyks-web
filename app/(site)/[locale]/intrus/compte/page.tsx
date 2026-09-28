@@ -136,10 +136,10 @@ export default async function IntrusAccountDeletionPage({
 						</ul>
 						<p>
 							In the games you played that have ended, your player data is{" "}
-							<strong>anonymised</strong>: your nickname is replaced by "Deleted player" and your
-							avatar by the default one, so that the other players keep their game history. Your
-							private game data (role, missions, Bluetooth token) is erased. What remains until
-							these games are erased is listed in section 5.
+							<strong>anonymised</strong>: your nickname is replaced by "Deleted player" (including
+							in the other players' game data) and your avatar by the default one, so that the other
+							players keep their game history. Your private game data (role, missions, Bluetooth
+							token) is erased. What remains until these games are erased is listed in section 5.
 						</p>
 					</>
 				) : (
@@ -164,11 +164,11 @@ export default async function IntrusAccountDeletionPage({
 						</ul>
 						<p>
 							Dans les parties terminées auxquelles vous avez participé, vos données de joueur sont{" "}
-							<strong>anonymisées</strong> : votre pseudo est remplacé par « Joueur supprimé » et
-							votre avatar par celui par défaut, afin que les autres joueurs conservent leur
-							historique. Vos données privées de partie (rôle, missions, jeton Bluetooth) sont
-							effacées. Ce qui subsiste jusqu'à l'effacement de ces parties est indiqué à la section
-							5.
+							<strong>anonymisées</strong> : votre pseudo est remplacé par « Joueur supprimé » (y
+							compris dans les données de partie des autres joueurs) et votre avatar par celui par
+							défaut, afin que les autres joueurs conservent leur historique. Vos données privées de
+							partie (rôle, missions, jeton Bluetooth) sont effacées. Ce qui subsiste jusqu'à
+							l'effacement de ces parties est indiqué à la section 5.
 						</p>
 					</>
 				)}
@@ -231,9 +231,9 @@ export default async function IntrusAccountDeletionPage({
 								automatically: write to us at {mailLink} to have it deleted.
 							</li>
 							<li>
-								Ended games you took part in still contain this identifier, as well as your nickname
-								in the private game data of other players (radar list), until they are automatically
-								erased 90 days after their end (see the {privacyLink}).
+								Ended games you took part in still contain this identifier, but no longer your
+								nickname, until they are automatically erased 90 days after their end (see the{" "}
+								{privacyLink}).
 							</li>
 							<li>
 								Crash reports sent before the deletion contain this identifier and are erased after
@@ -257,9 +257,8 @@ export default async function IntrusAccountDeletionPage({
 							</li>
 							<li>
 								Les parties terminées auxquelles vous avez participé contiennent encore cet
-								identifiant, ainsi que votre pseudo dans les données privées de partie d'autres
-								joueurs (liste du radar), jusqu'à leur effacement automatique 90 jours après leur
-								fin (voir la {privacyLink}).
+								identifiant, mais plus votre pseudo, jusqu'à leur effacement automatique 90 jours
+								après leur fin (voir la {privacyLink}).
 							</li>
 							<li>
 								Les rapports de plantage envoyés avant la suppression contiennent cet identifiant et
