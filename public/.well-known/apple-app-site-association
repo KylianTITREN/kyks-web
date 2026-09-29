@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["VA859P9KT5.com.kyks.games.tilto"],
+        "components": [
+          { "/": "/tilto/join/*", "comment": "Invitation Tilto" },
+          { "/": "/fr/tilto/join/*" },
+          { "/": "/en/tilto/join/*" }
+        ]
+      }
+    ]
+  }
+}
