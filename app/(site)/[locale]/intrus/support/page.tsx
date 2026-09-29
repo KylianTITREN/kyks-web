@@ -11,10 +11,10 @@ export async function generateMetadata({
 	const { locale } = await params;
 	const isEn = locale === "en";
 	return {
-		title: "Support · INTRUS",
+		title: "Support · Intrus",
 		description: isEn
-			? "Help and contact for the INTRUS app (KYKS)."
-			: "Aide et contact pour l'application INTRUS (KYKS).",
+			? "Help and contact for the Intrus app (KYKS)."
+			: "Aide et contact pour l'application Intrus (KYKS).",
 		robots: { index: false, follow: false },
 	};
 }
@@ -28,7 +28,7 @@ const FAQ: Record<Locale, Faq[]> = {
 	fr: [
 		{
 			q: "Comment rejoindre un salon ?",
-			a: "L'hôte crée la partie, déclare les pièces de sa maison et ouvre un salon : un code à 4 caractères s'affiche sur son écran. Sur l'accueil, touchez « Rejoindre — j'ai un code », saisissez-le (ou collez-le, ou ouvrez le lien d'invitation partagé par l'hôte), choisissez votre pseudo et votre avatar. Un salon dont la partie a déjà commencé n'accepte plus de nouveaux joueurs.",
+			a: "L'hôte crée la partie, déclare les pièces de sa maison et ouvre un salon : un code à 4 caractères s'affiche sur son écran. Sur l'accueil, touchez « Rejoindre — j'ai un code », saisissez-le (ou collez-le si l'hôte vous l'a envoyé), choisissez votre pseudo et votre avatar. Un salon dont la partie a déjà commencé n'accepte plus de nouveaux joueurs.",
 		},
 		{
 			q: "Combien de joueurs ?",
@@ -36,23 +36,23 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Faut-il le Bluetooth ?",
-			a: "Oui, pour le radar et les éliminations : chaque téléphone émet un jeton temporaire propre à la partie et détecte les joueurs proches, sans jamais mesurer de distance précise ni de position. Activez le Bluetooth et accordez la permission à INTRUS dans les réglages du téléphone, et gardez l'application au premier plan pendant la partie. Sans Bluetooth, la partie continue en mode honneur : missions, réunions et votes fonctionnent, mais le radar et les éliminations Bluetooth sont indisponibles.",
+			a: "Oui, pour le radar et les éliminations : chaque téléphone émet un jeton temporaire propre à la partie et détecte les joueurs proches, sans jamais mesurer de distance précise ni de position. Activez le Bluetooth et accordez la permission à Intrus dans les réglages du téléphone, et gardez l'application au premier plan pendant la partie. Sans Bluetooth, la partie continue en mode honneur : missions, réunions et votes fonctionnent, mais le radar et les éliminations Bluetooth sont indisponibles.",
 		},
 		{
 			q: "Faut-il créer un compte ?",
-			a: "Non. Au premier lancement, INTRUS crée un profil anonyme lié à ce téléphone : aucune adresse e-mail ni mot de passe. Pour retrouver votre progression (niveau, sonars, cosmétiques) sur un autre appareil ou après une réinstallation, touchez « Lier » sur votre Profil (ou Profil → Réglages → Continuer avec Apple), puis connectez-vous de la même façon ailleurs.",
+			a: "Non. Au premier lancement, Intrus crée un profil anonyme lié à ce téléphone : aucune adresse e-mail ni mot de passe. Pour retrouver votre progression (niveau, sonars, cosmétiques) sur un autre appareil ou après une réinstallation, touchez « Lier » sur votre Profil (ou Profil → Réglages → Continuer avec Apple ou Continuer avec Google ; seul Google est proposé sur Android), puis connectez-vous de la même façon ailleurs. Un profil rattaché à Apple ne se retrouve que sur iPhone.",
 		},
 		{
 			q: "Qu'est-ce qu'INTRUS+ et l'essai gratuit ?",
-			a: "INTRUS+ est l'abonnement du jeu : cosmétiques exclusifs, +300 sonars offerts chaque mois, +25 % d'XP et de sonars par partie et badge INTRUS+ sur votre avatar. Trois formules dans la Boutique : 1,49 €/mois, 9,99 €/an ou 14,99 € une fois, à vie. Les formules mensuelle et annuelle commencent par 7 jours gratuits (une seule fois par compte) ; sans résiliation avant la fin de l'essai, l'abonnement démarre au tarif indiqué. Le paiement passe par Apple.",
+			a: "INTRUS+ est l'abonnement du jeu : cosmétiques exclusifs, +300 sonars offerts chaque mois, +25 % d'XP et de sonars par partie et badge INTRUS+ sur votre avatar. Trois formules dans la Boutique : 1,49 €/mois, 9,99 €/an ou 14,99 € une fois, à vie. Les formules mensuelle et annuelle commencent par 7 jours gratuits (une seule fois par compte Apple ou Google) ; sans résiliation avant la fin de l'essai, l'abonnement démarre au tarif indiqué. Le paiement passe par Apple sur iPhone et par Google Play sur Android.",
 		},
 		{
 			q: "Mon achat ou mon abonnement n'apparaît pas.",
-			a: "Ouvrez Boutique → Restaurer les achats, avec le même compte Apple que celui de l'achat. Les sonars d'un pack sont crédités par notre serveur quelques secondes après la confirmation d'Apple ; si INTRUS+ ou vos sonars ne reviennent pas, écrivez-nous avec le reçu Apple.",
+			a: "Ouvrez Boutique → Restaurer les achats, avec le même compte que celui de l'achat : le même compte Apple sur iPhone, le même compte Google sur Android. Les sonars d'un pack sont crédités par notre serveur quelques secondes après la confirmation d'Apple ou de Google Play ; si INTRUS+ ou vos sonars ne reviennent pas, écrivez-nous avec le reçu d'Apple ou de Google Play.",
 		},
 		{
 			q: "Résilier INTRUS+ ou demander un remboursement ?",
-			a: "L'abonnement se gère dans les réglages de votre compte Apple (Réglages → votre nom → Abonnements) : la résiliation prend effet à la fin de la période en cours, et l'essai gratuit s'annule de la même façon. Les remboursements sont traités par Apple sur reportaproblem.apple.com ; nous n'avons pas accès à vos paiements.",
+			a: "Sur iPhone, l'abonnement se gère dans les réglages de votre compte Apple (Réglages → votre nom → Abonnements) ; sur Android, dans Google Play (Play Store → profil → Paiements et abonnements → Abonnements). La résiliation prend effet à la fin de la période en cours, et l'essai gratuit s'annule de la même façon. Les remboursements sont traités par Apple sur reportaproblem.apple.com, ou par Google Play depuis l'historique de vos commandes (Paiements et abonnements → Budget et historique) ; nous n'avons pas accès à vos paiements.",
 		},
 		{
 			q: "À quoi servent les sonars et les cosmétiques ?",
@@ -60,7 +60,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Je ne reçois pas les notifications de partie.",
-			a: "INTRUS ne prévient (début de partie, réunion convoquée, crise, fin de partie) que si vous avez accepté les notifications lorsque l'application vous l'a demandé. Vous pouvez les réactiver dans Réglages → Notifications → INTRUS.",
+			a: "Intrus ne prévient (début de partie, réunion convoquée, crise, fin de partie) que si vous avez accepté les notifications lorsque l'application vous l'a demandé. Vous pouvez les réactiver sur iPhone dans Réglages → Notifications → Intrus, sur Android dans Paramètres → Notifications, puis Intrus.",
 		},
 		{
 			q: "Supprimer mon compte ?",
@@ -69,13 +69,13 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Signaler un bug ?",
-			a: "Écrivez-nous avec votre modèle de téléphone, la version d'iOS, votre pseudo et, si le problème est survenu pendant une partie, le code du salon et l'heure approximative : cela nous permet de retrouver la partie et de reproduire le souci.",
+			a: "Écrivez-nous avec votre modèle de téléphone, la version d'iOS ou d'Android, votre pseudo et, si le problème est survenu pendant une partie, le code du salon et l'heure approximative : cela nous permet de retrouver la partie et de reproduire le souci.",
 		},
 	],
 	en: [
 		{
 			q: "How do I join a room?",
-			a: 'The host creates the game, lists the rooms of their house and opens a lobby: a 4-character code shows up on their screen. On the home screen, tap "Join — I have a code", type it in (or paste it, or open the invite link the host shared), then pick your nickname and avatar. A room whose game has already started no longer accepts new players.',
+			a: 'The host creates the game, lists the rooms of their house and opens a lobby: a 4-character code shows up on their screen. On the home screen, tap "Join — I have a code", type it in (or paste it if the host sent it to you), then pick your nickname and avatar. A room whose game has already started no longer accepts new players.',
 		},
 		{
 			q: "How many players?",
@@ -83,23 +83,23 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Is Bluetooth required?",
-			a: "Yes, for the radar and for eliminations: every phone broadcasts a temporary token specific to the game and detects nearby players, without ever measuring a precise distance or a location. Turn Bluetooth on, grant INTRUS the permission in your phone's settings, and keep the app in the foreground during the game. Without Bluetooth the game carries on in honour mode: missions, meetings and votes keep working, but the radar and Bluetooth eliminations are unavailable.",
+			a: "Yes, for the radar and for eliminations: every phone broadcasts a temporary token specific to the game and detects nearby players, without ever measuring a precise distance or a location. Turn Bluetooth on, grant Intrus the permission in your phone's settings, and keep the app in the foreground during the game. Without Bluetooth the game carries on in honour mode: missions, meetings and votes keep working, but the radar and Bluetooth eliminations are unavailable.",
 		},
 		{
 			q: "Do I need an account?",
-			a: "No. On first launch, INTRUS creates an anonymous profile tied to this phone: no e-mail address, no password. To get your progression (level, sonars, cosmetics) back on another device or after reinstalling, tap “Link” on your Profile (or Profile → Settings → Continue with Apple), then sign in the same way elsewhere.",
+			a: "No. On first launch, Intrus creates an anonymous profile tied to this phone: no e-mail address, no password. To get your progression (level, sonars, cosmetics) back on another device or after reinstalling, tap “Link” on your Profile (or Profile → Settings → Continue with Apple or Continue with Google; only Google is offered on Android), then sign in the same way elsewhere. A profile linked with Apple can only be found again on iPhone.",
 		},
 		{
 			q: "What are INTRUS+ and the free trial?",
-			a: "INTRUS+ is the game's subscription: exclusive cosmetics, +300 free sonars every month, +25% XP and sonars per game and an INTRUS+ badge on your avatar. Three plans in the Store: €1.49/month, €9.99/year or €14.99 once, for life. The monthly and yearly plans start with 7 free days (once per account); unless you cancel before the end of the trial, the subscription starts at the price shown. Payment goes through Apple.",
+			a: "INTRUS+ is the game's subscription: exclusive cosmetics, +300 free sonars every month, +25% XP and sonars per game and an INTRUS+ badge on your avatar. Three plans in the Store: €1.49/month, €9.99/year or €14.99 once, for life. The monthly and yearly plans start with 7 free days (once per Apple or Google account); unless you cancel before the end of the trial, the subscription starts at the price shown. Payment goes through Apple on iPhone and through Google Play on Android.",
 		},
 		{
 			q: "My purchase or subscription doesn't show up.",
-			a: "Open Store → Restore purchases, signed in with the same Apple account you bought with. The sonars of a pack are credited by our server a few seconds after Apple confirms the purchase; if INTRUS+ or your sonars don't come back, write to us with your Apple receipt.",
+			a: "Open Store → Restore purchases, signed in with the account you bought with: the same Apple account on iPhone, the same Google account on Android. The sonars of a pack are credited by our server a few seconds after Apple or Google Play confirms the purchase; if INTRUS+ or your sonars don't come back, write to us with your Apple or Google Play receipt.",
 		},
 		{
 			q: "Cancel INTRUS+ or ask for a refund?",
-			a: "The subscription is managed in your Apple account settings (Settings → your name → Subscriptions): cancellation takes effect at the end of the current period, and the free trial is cancelled the same way. Refunds are handled by Apple at reportaproblem.apple.com; we have no access to your payments.",
+			a: "On iPhone, the subscription is managed in your Apple account settings (Settings → your name → Subscriptions); on Android, in Google Play (Play Store → profile → Payments & subscriptions → Subscriptions). Cancellation takes effect at the end of the current period, and the free trial is cancelled the same way. Refunds are handled by Apple at reportaproblem.apple.com, or by Google Play from your order history (Payments & subscriptions → Budget & history); we have no access to your payments.",
 		},
 		{
 			q: "What are sonars and cosmetics for?",
@@ -107,7 +107,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "I don't get game notifications.",
-			a: "INTRUS only notifies you (game start, meeting called, crisis, end of game) if you allowed notifications when the app asked. You can turn them back on in Settings → Notifications → INTRUS.",
+			a: "Intrus only notifies you (game start, meeting called, crisis, end of game) if you allowed notifications when the app asked. You can turn them back on on iPhone in Settings → Notifications → Intrus, on Android in Settings → Notifications, then Intrus.",
 		},
 		{
 			q: "Delete my account?",
@@ -116,7 +116,7 @@ const FAQ: Record<Locale, Faq[]> = {
 		},
 		{
 			q: "Report a bug?",
-			a: "Write to us with your phone model, your iOS version, your nickname and, if the problem happened during a game, the room code and the approximate time: it lets us find the game and reproduce the issue.",
+			a: "Write to us with your phone model, your iOS or Android version, your nickname and, if the problem happened during a game, the room code and the approximate time: it lets us find the game and reproduce the issue.",
 		},
 	],
 };
@@ -131,21 +131,21 @@ export default async function IntrusSupportPage({
 
 	return (
 		<LegalShell
-			brand="INTRUS"
+			brand="Intrus"
 			title="Support"
 			subtitle={
 				isEn
 					? "A question, a bug, an intruder who swears they're innocent? We're here."
 					: "Une question, un bug, un intrus qui jure qu'il est innocent ? On est là."
 			}
-			lastUpdated={isEn ? "September 28, 2026" : "28 septembre 2026"}
+			lastUpdated={isEn ? "September 29, 2026" : "29 septembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			<LegalSection heading={isEn ? "Contact us" : "Nous contacter"}>
 				<p>
 					{isEn
-						? "For any question, bug or suggestion about INTRUS, write to "
-						: "Pour toute question, bug ou suggestion concernant INTRUS, écrivez-nous à "}
+						? "For any question, bug or suggestion about Intrus, write to "
+						: "Pour toute question, bug ou suggestion concernant Intrus, écrivez-nous à "}
 					<a className="text-accent hover:underline" href={`mailto:${CONTACT_EMAIL}`}>
 						{CONTACT_EMAIL}
 					</a>

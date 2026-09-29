@@ -47,7 +47,7 @@ export default async function IntrusAccountDeletionPage({
 					? "How to delete your Intrus account and all of your data."
 					: "Comment supprimer votre compte Intrus et l'ensemble de vos données."
 			}
-			lastUpdated={isEn ? "September 28, 2026" : "28 septembre 2026"}
+			lastUpdated={isEn ? "September 29, 2026" : "29 septembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			<LegalSection
@@ -118,7 +118,8 @@ export default async function IntrusAccountDeletionPage({
 					<>
 						<ul className="flex list-disc flex-col gap-2 pl-5">
 							<li>
-								Your profile: nickname, avatar (colour, accessory, eyes) and notification token.
+								Your profile: nickname, avatar (colour, accessory, eyes), app language and
+								notification token.
 							</li>
 							<li>
 								Your progression: experience points, level, sonars, games played and won,
@@ -136,7 +137,7 @@ export default async function IntrusAccountDeletionPage({
 						</ul>
 						<p>
 							In the games you played that have ended, your player data is{" "}
-							<strong>anonymised</strong>: your nickname is replaced by "Deleted player" (including
+							<strong>anonymised</strong>: your nickname is replaced by "Joueur supprimé" (including
 							in the other players' game data) and your avatar by the default one, so that the other
 							players keep their game history. Your private game data (role, missions, Bluetooth
 							token) is erased. What remains until these games are erased is listed in section 5.
@@ -146,7 +147,8 @@ export default async function IntrusAccountDeletionPage({
 					<>
 						<ul className="flex list-disc flex-col gap-2 pl-5">
 							<li>
-								Votre profil : pseudo, avatar (couleur, accessoire, yeux) et jeton de notification.
+								Votre profil : pseudo, avatar (couleur, accessoire, yeux), langue de l'application
+								et jeton de notification.
 							</li>
 							<li>
 								Votre progression : points d'expérience, niveau, sonars, parties jouées et gagnées,
