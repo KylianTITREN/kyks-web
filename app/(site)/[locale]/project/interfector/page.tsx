@@ -128,8 +128,7 @@ const COPY: Record<Locale, Copy> = {
 			{ label: "i18n FR / EN", detail: "Copy jouable dans les deux langues." },
 		],
 		statusTitle: "Statut",
-		statusBody:
-			"Interfector est disponible sur l'App Store et le Play Store.",
+		statusBody: "Interfector est disponible sur l'App Store et le Play Store.",
 		statusChip: "Disponible",
 		linksTitle: "En savoir plus",
 		backToKyks: "Retour sur kyks.io",
@@ -215,8 +214,7 @@ const COPY: Record<Locale, Copy> = {
 			{ label: "i18n FR / EN", detail: "Playable copy in both languages." },
 		],
 		statusTitle: "Status",
-		statusBody:
-			"Interfector is available on the App Store and Play Store.",
+		statusBody: "Interfector is available on the App Store and Play Store.",
 		statusChip: "Available",
 		linksTitle: "Learn more",
 		backToKyks: "Back to kyks.io",
