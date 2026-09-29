@@ -190,19 +190,21 @@ export default async function TiltoTermsPage({ params }: { params: Promise<{ loc
 				{isEn ? (
 					<p>
 						Tilto is recommended for ages 13 and up. The "After midnight" pack contains suggestive
-						cards reserved for people aged <strong>18 and over</strong>. Before you buy it, the app
-						asks you to confirm that you are 18 or older; its cards then stay out of games until the
-						host turns them on for the room ("After midnight cards · 18+", off by default). By
-						turning them on, the host undertakes to play only with consenting adults.
+						cards reserved for people aged <strong>18 and over</strong>. Before you buy it (or, with
+						the Tilto Pass, the first time you turn it on), the app asks you to confirm that you are
+						18 or older; its cards then stay out of games until the host turns them on for the room
+						("After midnight cards · 18+", off by default). By turning them on, the host undertakes
+						to play only with consenting adults.
 					</p>
 				) : (
 					<p>
 						Tilto est recommandé à partir de 13 ans. Le pack « Après minuit » contient des cartes
 						suggestives réservées aux personnes de <strong>18 ans et plus</strong>. Avant de
-						l'acheter, l'application vous demande de confirmer que vous avez 18 ans ou plus ; ses
-						cartes restent ensuite hors des parties tant que l'hôte ne les active pas pour le salon
-						(« Cartes Après minuit · 18+ », désactivé par défaut). En les activant, l'hôte s'engage
-						à ne jouer qu'avec des adultes consentants.
+						l'acheter (ou, avec le Tilto Pass, à sa première activation), l'application vous demande
+						de confirmer que vous avez 18 ans ou plus ; ses cartes restent ensuite hors des parties
+						tant que l'hôte ne les active pas pour le salon (« Cartes Après minuit · 18+ »,
+						désactivé par défaut). En les activant, l'hôte s'engage à ne jouer qu'avec des adultes
+						consentants.
 					</p>
 				)}
 			</LegalSection>

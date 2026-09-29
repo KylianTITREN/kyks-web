@@ -599,20 +599,22 @@ export default async function TiltoPrivacyPage({
 					<p>
 						Tilto is intended for ages <strong>13 and up</strong>. The "After midnight" pack, with
 						its suggestive cards, is reserved for adults: the app asks you to confirm that you are
-						18 or older before buying it, and its cards only enter a game if the host turns them on
-						for the room (off by default). Beyond this confirmation, the app does not verify your
-						age: we rely on the store ratings and on the good judgement of players and parents. We
-						collect no data specifically about children beyond what is described on this page.
+						18 or older before buying it or, with the Tilto Pass, the first time you turn it on, and
+						its cards only enter a game if the host turns them on for the room (off by default).
+						Beyond this confirmation, the app does not verify your age: we rely on the store ratings
+						and on the good judgement of players and parents. We collect no data specifically about
+						children beyond what is described on this page.
 					</p>
 				) : (
 					<p>
 						Tilto s'adresse aux personnes de <strong>13 ans et plus</strong>. Le pack « Après minuit
 						», aux cartes suggestives, est réservé aux adultes : l'application demande de confirmer
-						avoir 18 ans ou plus avant de l'acheter, et ses cartes n'entrent dans une partie que si
-						l'hôte les active pour le salon (désactivées par défaut). Au-delà de cette confirmation,
-						l'application ne vérifie pas votre âge : nous nous appuyons sur les classifications des
-						stores et sur le bon sens des joueurs et des parents. Nous ne collectons aucune donnée
-						spécifique aux enfants au-delà de ce qui est décrit sur cette page.
+						avoir 18 ans ou plus avant de l'acheter ou, avec le Tilto Pass, à sa première
+						activation, et ses cartes n'entrent dans une partie que si l'hôte les active pour le
+						salon (désactivées par défaut). Au-delà de cette confirmation, l'application ne vérifie
+						pas votre âge : nous nous appuyons sur les classifications des stores et sur le bon sens
+						des joueurs et des parents. Nous ne collectons aucune donnée spécifique aux enfants
+						au-delà de ce qui est décrit sur cette page.
 					</p>
 				)}
 			</LegalSection>
