@@ -132,7 +132,7 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
 				<p>
 					{isEn
 						? "Unless otherwise stated, all elements of the kyks.io website — texts, visuals, logos, interfaces, as well as the names and graphic elements of KYKS and its apps — are the property of KYKS. Any reproduction, representation, adaptation or use, in whole or in part, without KYKS's prior written consent is prohibited and may constitute an infringement punishable under Articles L. 335-2 et seq. of the French Intellectual Property Code."
-						: "Sauf mention contraire, l'ensemble des éléments du site kyks.io — textes, visuels, logos, interfaces, ainsi que les noms et éléments graphiques de KYKS et de ses applications — est la propriété de KYKS. Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, sans l'autorisation écrite préalable de KYKS est interdite et constitue une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle."}
+						: "Sauf mention contraire, l'ensemble des éléments du site kyks.io — textes, visuels, logos, interfaces, ainsi que les noms et éléments graphiques de KYKS et de ses applications — est la propriété de KYKS. Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, sans l'autorisation écrite préalable de KYKS est interdite et est susceptible de constituer une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle."}
 				</p>
 				<p>
 					{isEn
