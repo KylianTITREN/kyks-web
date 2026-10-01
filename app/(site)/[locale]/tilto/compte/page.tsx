@@ -159,12 +159,8 @@ export default async function TiltoAccountDeletionPage({
 							"Restore purchases", including after reinstalling the app.
 						</p>
 						<p>
-							Deleting your account does <strong>not</strong> cancel an ongoing Tilto Pass
-							subscription: subscriptions are managed by Apple or Google Play, not by us. Cancel it
-							yourself, otherwise it keeps renewing: on iPhone from your Apple account settings
-							(Settings → your name → Subscriptions), on Android in the Play Store (Play Store →
-							profile → Payments &amp; subscriptions → Subscriptions). Refunds are handled by Apple
-							or Google Play under their own terms.
+							The Tilto Pass and the packs are one-time purchases, with no subscription to cancel.
+							Refunds are handled by Apple or Google Play under their own terms.
 						</p>
 					</>
 				) : (
@@ -174,11 +170,7 @@ export default async function TiltoAccountDeletionPage({
 							restaurer avec « Restaurer les achats », y compris après une réinstallation.
 						</p>
 						<p>
-							La suppression du compte ne résilie <strong>pas</strong> un abonnement Tilto Pass en
-							cours : les abonnements sont gérés par Apple ou Google Play, pas par nous. Résiliez-le
-							vous-même, sinon il continue de se renouveler : sur iPhone depuis les réglages de
-							votre compte Apple (Réglages → votre nom → Abonnements), sur Android dans le Play
-							Store (Play Store → profil → Paiements et abonnements → Abonnements). Les
+							Le Tilto Pass et les packs sont des achats uniques, sans abonnement à résilier. Les
 							remboursements sont traités par Apple ou Google Play selon leurs propres conditions.
 						</p>
 					</>

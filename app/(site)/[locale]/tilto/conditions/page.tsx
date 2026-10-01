@@ -219,22 +219,14 @@ export default async function TiltoTermsPage({ params }: { params: Promise<{ loc
 							are bought individually, with a one-time payment.
 						</li>
 						<li>
-							<strong>Tilto Pass</strong>: it unlocks every pack, current and future, either through
-							a monthly subscription or through a one-time lifetime purchase.
+							<strong>Tilto Pass</strong>: it unlocks every pack, current and future, with a
+							one-time payment.
 						</li>
 						<li>
 							<strong>Price and payment</strong>: the price is the one shown in the app by the App
 							Store or Google Play before you confirm. Payment is charged to your Apple or Google
 							account when you confirm the purchase; it is processed by Apple or Google under their
 							own terms, and we never have access to your payment details.
-						</li>
-						<li>
-							<strong>Monthly subscription</strong>: it renews automatically every month unless you
-							cancel it at least 24 hours before the end of the current period, in your Apple
-							account settings (Settings → your name → Subscriptions) or in Google Play (Play Store
-							→ profile → Payments &amp; subscriptions → Subscriptions). Cancellation takes effect
-							at the end of the current period, until which the Pass stays active. Uninstalling the
-							app or deleting your account does not cancel the subscription.
 						</li>
 						<li>
 							<strong>Refunds</strong>: refund requests, including any right of withdrawal, are
@@ -259,8 +251,8 @@ export default async function TiltoTermsPage({ params }: { params: Promise<{ loc
 							s'achètent à l'unité, en paiement unique.
 						</li>
 						<li>
-							<strong>Tilto Pass</strong> : il débloque tous les packs, actuels et à venir, soit par
-							un abonnement mensuel, soit par un achat unique à vie.
+							<strong>Tilto Pass</strong> : il débloque tous les packs, actuels et à venir, en
+							paiement unique.
 						</li>
 						<li>
 							<strong>Prix et paiement</strong> : le prix est celui affiché dans l'application par
@@ -268,14 +260,6 @@ export default async function TiltoTermsPage({ params }: { params: Promise<{ loc
 							compte Apple ou Google à la confirmation de l'achat ; il est traité par Apple ou
 							Google selon leurs propres conditions, et nous n'avons jamais accès à vos moyens de
 							paiement.
-						</li>
-						<li>
-							<strong>Abonnement mensuel</strong> : il se renouvelle automatiquement chaque mois
-							sauf résiliation au moins 24 heures avant la fin de la période en cours, dans les
-							réglages de votre compte Apple (Réglages → votre nom → Abonnements) ou dans Google
-							Play (Play Store → profil → Paiements et abonnements → Abonnements). La résiliation
-							prend effet à la fin de la période en cours, jusqu'à laquelle le Pass reste actif.
-							Désinstaller l'application ou supprimer votre compte ne résilie pas l'abonnement.
 						</li>
 						<li>
 							<strong>Remboursements</strong> : les demandes de remboursement, y compris l'exercice

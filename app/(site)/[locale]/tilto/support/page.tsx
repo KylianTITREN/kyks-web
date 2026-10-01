@@ -35,8 +35,8 @@ const FAQ: Record<Locale, Faq[]> = {
 			a: "Touchez « Restaurer les achats », en bas de la Boutique ou dans votre Profil, avec le même compte Apple ou Google que celui de l'achat. Si un pack ou le Tilto Pass reste verrouillé, écrivez-nous avec le reçu Apple ou Google.",
 		},
 		{
-			q: "Résilier le Tilto Pass ou demander un remboursement ?",
-			a: "L'abonnement mensuel se renouvelle automatiquement : résiliez-le au moins 24 h avant la fin de la période en cours, dans les réglages de votre compte Apple (Réglages → votre nom → Abonnements) ou dans le Play Store (profil → Paiements et abonnements → Abonnements). Les remboursements sont traités par Apple (reportaproblem.apple.com) ou par Google Play ; nous n'avons pas accès à vos paiements.",
+			q: "Demander un remboursement ?",
+			a: "Le Tilto Pass et les packs s'achètent en paiement unique : il n'y a pas d'abonnement à résilier. Les remboursements sont traités par Apple (reportaproblem.apple.com) ou par Google Play ; nous n'avons pas accès à vos paiements.",
 		},
 		{
 			q: "Je ne reçois pas les notifications.",
@@ -62,8 +62,8 @@ const FAQ: Record<Locale, Faq[]> = {
 			a: "Tap “Restore purchases”, at the bottom of the Shop or in your Profile, signed in with the same Apple or Google account you bought with. If a pack or the Tilto Pass stays locked, write to us with your Apple or Google receipt.",
 		},
 		{
-			q: "Cancel the Tilto Pass or ask for a refund?",
-			a: "The monthly subscription renews automatically: cancel it at least 24 hours before the end of the current period, in your Apple account settings (Settings → your name → Subscriptions) or in the Play Store (profile → Payments & subscriptions → Subscriptions). Refunds are handled by Apple (reportaproblem.apple.com) or by Google Play; we have no access to your payments.",
+			q: "Ask for a refund?",
+			a: "The Tilto Pass and the packs are one-time purchases: there is no subscription to cancel. Refunds are handled by Apple (reportaproblem.apple.com) or by Google Play; we have no access to your payments.",
 		},
 		{
 			q: "I don't get notifications.",

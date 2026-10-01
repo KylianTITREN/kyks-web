@@ -362,34 +362,29 @@ export default async function TiltoPrivacyPage({
 					<p>
 						Tilto includes the Classic pack (200 cards) for free. The Happy hour, Pop culture,
 						Family and After midnight packs are sold individually; the <strong>Tilto Pass</strong>{" "}
-						unlocks every pack, current and future, through a monthly subscription or a one-time
-						lifetime purchase. Payment is handled entirely by <strong>Apple</strong> (App Store) on
-						iPhone and by <strong>Google Play</strong> (Google Play Billing) on Android, under their
-						own terms: we never see your payment method or your identity.{" "}
-						<strong>RevenueCat</strong> receives the transaction receipts from Apple and Google
-						Play, checks them and notifies our server, which records the active entitlements of your
-						account. Your RevenueCat identifier is your account identifier. Purchases stay tied to
-						your Apple or Google account and can be recovered with "Restore purchases". Refunds and
-						subscription management (renewal, cancellation) are handled by Apple or Google Play, not
-						by us: in your Apple account settings on iPhone, or on Android in the Play Store
-						(profile → Payments &amp; subscriptions → Subscriptions).
+						unlocks every pack, current and future, with a one-time payment. Payment is handled
+						entirely by <strong>Apple</strong> (App Store) on iPhone and by{" "}
+						<strong>Google Play</strong> (Google Play Billing) on Android, under their own terms: we
+						never see your payment method or your identity. <strong>RevenueCat</strong> receives the
+						transaction receipts from Apple and Google Play, checks them and notifies our server,
+						which records the active entitlements of your account. Your RevenueCat identifier is
+						your account identifier. Purchases stay tied to your Apple or Google account and can be
+						recovered with "Restore purchases". Refunds are handled by Apple or Google Play under
+						their own terms, not by us.
 					</p>
 				) : (
 					<p>
 						Tilto inclut gratuitement le pack Classique (200 cartes). Les packs Apéro, Culture pop,
 						Famille et Après minuit s'achètent à l'unité ; le <strong>Tilto Pass</strong> débloque
-						tous les packs, actuels et à venir, par un abonnement mensuel ou un achat unique à vie.
-						Le paiement est entièrement géré par <strong>Apple</strong> (App Store) sur iPhone et
-						par <strong>Google Play</strong> (Google Play Billing) sur Android, selon leurs propres
-						conditions : nous ne voyons jamais votre moyen de paiement ni votre identité.{" "}
-						<strong>RevenueCat</strong> reçoit d'Apple et de Google Play les reçus de transaction,
-						les vérifie et prévient notre serveur, qui enregistre les droits actifs de votre compte.
-						Votre identifiant RevenueCat est l'identifiant de votre compte. Les achats restent liés
-						à votre compte Apple ou Google et se récupèrent avec « Restaurer les achats ». Les
-						remboursements et la gestion de l'abonnement (renouvellement, résiliation) relèvent
-						d'Apple ou de Google Play, pas de nous : dans les réglages de votre compte Apple sur
-						iPhone, ou sur Android dans le Play Store (profil → Paiements et abonnements →
-						Abonnements).
+						tous les packs, actuels et à venir, en paiement unique. Le paiement est entièrement géré
+						par <strong>Apple</strong> (App Store) sur iPhone et par <strong>Google Play</strong>{" "}
+						(Google Play Billing) sur Android, selon leurs propres conditions : nous ne voyons
+						jamais votre moyen de paiement ni votre identité. <strong>RevenueCat</strong> reçoit
+						d'Apple et de Google Play les reçus de transaction, les vérifie et prévient notre
+						serveur, qui enregistre les droits actifs de votre compte. Votre identifiant RevenueCat
+						est l'identifiant de votre compte. Les achats restent liés à votre compte Apple ou
+						Google et se récupèrent avec « Restaurer les achats ». Les remboursements relèvent
+						d'Apple ou de Google Play, selon leurs propres conditions, pas de nous.
 					</p>
 				)}
 			</LegalSection>
@@ -648,12 +643,10 @@ export default async function TiltoPrivacyPage({
 							an ongoing online game: leave it first. If you no longer have access to the app, write
 							to us at {mailLink} from the address linked to your account, with the subject "Tilto —
 							account deletion": we delete the account within <strong>30 days</strong> and confirm
-							by reply. Deleting your account does not cancel an ongoing Tilto Pass subscription:
-							manage or cancel it from your Apple account on iPhone, or in the Play Store on Android
-							(profile → Payments &amp; subscriptions → Subscriptions). You can also, on your own:
-							uninstall the app (this erases the settings and data stored in it), revoke "Sign in
-							with Apple" for Tilto in your Apple ID settings and remove Tilto's access in your
-							Google account settings. Details on the {accountLink} page.
+							by reply. You can also, on your own: uninstall the app (this erases the settings and
+							data stored in it), revoke "Sign in with Apple" for Tilto in your Apple ID settings
+							and remove Tilto's access in your Google account settings. Details on the{" "}
+							{accountLink} page.
 						</p>
 						<p>
 							To exercise any of these rights, write to us at {mailLink}. You may also lodge a
@@ -686,14 +679,11 @@ export default async function TiltoPrivacyPage({
 							êtes dans une partie en ligne en cours : quittez-la d'abord. Si vous n'avez plus accès
 							à l'application, écrivez-nous à {mailLink} depuis l'adresse liée à votre compte, avec
 							pour objet « Tilto — suppression de compte » : nous supprimons le compte sous{" "}
-							<strong>30 jours</strong> et vous le confirmons par retour. La suppression du compte
-							ne résilie pas un abonnement Tilto Pass en cours : gérez-le ou résiliez-le depuis
-							votre compte Apple sur iPhone, ou dans le Play Store sur Android (profil → Paiements
-							et abonnements → Abonnements). Vous pouvez aussi, de votre côté : désinstaller
-							l'application (ce qui efface les réglages et les données qu'elle stocke), révoquer «
-							Se connecter avec Apple » pour Tilto dans les réglages de votre identifiant Apple et
-							retirer l'accès de Tilto dans les paramètres de votre compte Google. Détails sur la
-							page {accountLink}.
+							<strong>30 jours</strong> et vous le confirmons par retour. Vous pouvez aussi, de
+							votre côté : désinstaller l'application (ce qui efface les réglages et les données
+							qu'elle stocke), révoquer « Se connecter avec Apple » pour Tilto dans les réglages de
+							votre identifiant Apple et retirer l'accès de Tilto dans les paramètres de votre
+							compte Google. Détails sur la page {accountLink}.
 						</p>
 						<p>
 							Pour exercer l'un de ces droits, écrivez-nous à {mailLink}. Vous pouvez également
