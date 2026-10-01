@@ -74,14 +74,15 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
 						The kyks.io website is published by <strong>KYKS</strong>, a French single-shareholder
 						simplified joint-stock company (SASU) with a share capital of €1,000, registered with
 						the Paris Trade and Companies Register (RCS Paris) under number 929 633 162, with its
-						registered office at 14 rue Bausset, 75015 Paris, France.
+						registered office at 14 rue Bausset, 75015 Paris, France. EU VAT number: FR21929633162.
 					</p>
 				) : (
 					<p>
 						Le site kyks.io est édité par <strong>KYKS</strong>, société par actions simplifiée
 						unipersonnelle (SASU) au capital de 1 000 €, immatriculée au Registre du commerce et des
 						sociétés de Paris (RCS Paris) sous le numéro 929 633 162, dont le siège social est situé
-						au 14 rue Bausset, 75015 Paris, France.
+						au 14 rue Bausset, 75015 Paris, France. Numéro de TVA intracommunautaire :
+						FR21929633162.
 					</p>
 				)}
 				<p>
