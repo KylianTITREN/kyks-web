@@ -1,0 +1,13 @@
+[
+	{
+		"relation": ["delegate_permission/common.handle_all_urls"],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "com.kyks.games.tilto",
+			"sha256_cert_fingerprints": [
+				"38:28:4D:BA:CC:91:A2:29:72:1D:94:6E:65:0A:A5:78:4B:78:13:09:BA:87:6D:15:F1:7B:C5:04:36:5D:FC:DB",
+				"A8:C8:5F:54:7A:56:36:89:39:9E:32:DD:DC:3E:7D:2D:70:F2:6E:78:EE:EE:78:A5:AE:32:75:C7:CF:25:25:AB"
+			]
+		}
+	}
+]

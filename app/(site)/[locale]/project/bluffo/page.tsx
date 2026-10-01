@@ -142,8 +142,7 @@ const COPY: Record<Locale, Copy> = {
 		],
 		statusChip: "Disponible",
 		statusTitle: "Statut",
-		statusBody:
-			"Bluffo est disponible sur l'App Store et le Play Store depuis septembre 2026.",
+		statusBody: "Bluffo est disponible sur l'App Store et le Play Store depuis septembre 2026.",
 		linksTitle: "En savoir plus",
 		viewLegal: "Conditions d'utilisation",
 		viewPrivacy: "Confidentialité",
@@ -229,8 +228,7 @@ const COPY: Record<Locale, Copy> = {
 		],
 		statusChip: "Available",
 		statusTitle: "Status",
-		statusBody:
-			"Bluffo has been on the App Store and Play Store since September 2026.",
+		statusBody: "Bluffo has been on the App Store and Play Store since September 2026.",
 		linksTitle: "Learn more",
 		viewLegal: "Terms of use",
 		viewPrivacy: "Privacy",
