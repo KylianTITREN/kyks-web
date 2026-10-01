@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ManageConsentButton } from "./ManageConsentButton";
 
@@ -71,8 +72,15 @@ export function Footer() {
 					<span>
 						© {year} KYKS — {t("rights")}
 					</span>
-					<div className="flex items-center gap-3">
+					<div className="flex flex-wrap items-center gap-3">
 						<span className="text-[var(--color-text-subtle)]">{t("credits")}</span>
+						<span className="text-[var(--color-border-strong)]">·</span>
+						<Link
+							href="/mentions-legales"
+							className="text-[var(--color-text-subtle)] underline decoration-[var(--color-border-strong)] underline-offset-4 transition-colors hover:text-[var(--color-text-muted)]"
+						>
+							{t("legal")}
+						</Link>
 						<span className="text-[var(--color-border-strong)]">·</span>
 						<ManageConsentButton />
 					</div>
