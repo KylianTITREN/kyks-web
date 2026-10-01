@@ -22,7 +22,7 @@ export function LegalShell({
 	children,
 }: LegalShellProps) {
 	return (
-		<main className="mx-auto max-w-2xl px-6 py-24 md:py-32">
+		<article className="mx-auto max-w-2xl px-6 py-24 md:py-32">
 			<header className="mb-12 border-b border-border pb-8">
 				<p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">{brand}</p>
 				<h1 className="font-display text-4xl leading-tight text-text md:text-5xl">{title}</h1>
@@ -32,7 +32,7 @@ export function LegalShell({
 				</p>
 			</header>
 			<div className="legal-prose flex flex-col gap-10 text-text-muted">{children}</div>
-		</main>
+		</article>
 	);
 }
 
