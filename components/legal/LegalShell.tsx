@@ -1,3 +1,4 @@
+import { useLocale } from "next-intl";
 import type { ReactNode } from "react";
 
 type LegalShellProps = {
@@ -21,6 +22,8 @@ export function LegalShell({
 	brand = "Clork",
 	children,
 }: LegalShellProps) {
+	// Espace avant les deux-points en français seulement.
+	const separator = useLocale() === "fr" ? " :" : ":";
 	return (
 		<article className="mx-auto max-w-2xl px-6 py-24 md:py-32">
 			<header className="mb-12 border-b border-border pb-8">
@@ -28,7 +31,8 @@ export function LegalShell({
 				<h1 className="font-display text-4xl leading-tight text-text md:text-5xl">{title}</h1>
 				<p className="mt-4 text-lg text-text-muted">{subtitle}</p>
 				<p className="mt-6 text-sm text-text-subtle">
-					{lastUpdatedLabel} : {lastUpdated}
+					{lastUpdatedLabel}
+					{separator} {lastUpdated}
 				</p>
 			</header>
 			<div className="legal-prose flex flex-col gap-10 text-text-muted">{children}</div>
