@@ -20,6 +20,7 @@ const nunito = Nunito({
 
 const APP_STORE_ID = "6807782222";
 const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_ID}`;
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.kyks.games.intrus";
 
 export async function generateMetadata({
 	params,
@@ -75,7 +76,6 @@ type Copy = {
 		appleLabel: string;
 		playOverline: string;
 		playLabel: string;
-		soon: string;
 	};
 	iconAlt: string;
 	credits: string;
@@ -158,10 +158,10 @@ const COPY: Record<Locale, Copy> = {
 			},
 			{ label: "RevenueCat", detail: "INTRUS+ et packs de sonars." },
 		],
-		statusChip: "Disponible sur iPhone",
+		statusChip: "Disponible sur iPhone et Android",
 		statusTitle: "Statut",
 		statusBody:
-			"Intrus est disponible sur l'App Store pour iPhone. La version Android arrive bientôt sur Google Play. INTRUS+ reste facultatif.",
+			"Intrus est disponible sur l'App Store pour iPhone et sur Google Play pour Android. INTRUS+ reste facultatif.",
 		linksTitle: "En savoir plus",
 		viewSupport: "Support Intrus",
 		viewPrivacy: "Confidentialité",
@@ -171,12 +171,11 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Télécharger",
 			title: "Un téléphone chacun. Un traître parmi vous.",
-			body: "Sur iPhone dès maintenant, bientôt sur Android.",
+			body: "Sur iPhone et Android, dès maintenant.",
 			appleOverline: "Télécharger sur",
 			appleLabel: "App Store",
-			playOverline: "Android",
+			playOverline: "Disponible sur",
 			playLabel: "Google Play",
-			soon: "Bientôt",
 		},
 		iconAlt: "Icône de l'app Intrus : une visière violette, deux yeux lime tournés vers la droite",
 		credits: "Design, code et direction produit : Kylian Titren pour KYKS.",
@@ -254,10 +253,10 @@ const COPY: Record<Locale, Copy> = {
 			},
 			{ label: "RevenueCat", detail: "INTRUS+ and sonar packs." },
 		],
-		statusChip: "Available on iPhone",
+		statusChip: "Available on iPhone and Android",
 		statusTitle: "Status",
 		statusBody:
-			"Intrus is out on the App Store for iPhone. The Android version is coming soon to Google Play. INTRUS+ stays optional.",
+			"Intrus is out on the App Store for iPhone and on Google Play for Android. INTRUS+ stays optional.",
 		linksTitle: "Learn more",
 		viewSupport: "Intrus support",
 		viewPrivacy: "Privacy",
@@ -267,12 +266,11 @@ const COPY: Record<Locale, Copy> = {
 		download: {
 			kicker: "Download",
 			title: "One phone each. One traitor among you.",
-			body: "On iPhone now, coming soon to Android.",
+			body: "On iPhone and Android, right now.",
 			appleOverline: "Download on the",
 			appleLabel: "App Store",
-			playOverline: "Android",
+			playOverline: "Get it on",
 			playLabel: "Google Play",
-			soon: "Coming soon",
 		},
 		iconAlt: "Intrus app icon: a purple visor with two lime eyes glancing to the right",
 		credits: "Design, code and product direction by Kylian Titren for KYKS.",
@@ -719,7 +717,7 @@ export default async function IntrusProjectPage({
 								kind="play"
 								overline={t.download.playOverline}
 								label={t.download.playLabel}
-								soon={t.download.soon}
+								href={PLAY_STORE_URL}
 							/>
 						</div>
 					</div>
