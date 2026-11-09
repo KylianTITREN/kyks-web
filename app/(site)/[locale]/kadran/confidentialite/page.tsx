@@ -65,24 +65,25 @@ export default async function KadranPrivacyPage({
 					? "Kadran keeps your widgets on your iPhone. Here is exactly what that means."
 					: "Kadran garde vos widgets sur votre iPhone. Voici précisément ce que cela veut dire."
 			}
-			lastUpdated={isEn ? "November 8, 2026" : "8 novembre 2026"}
+			lastUpdated={isEn ? "November 9, 2026" : "9 novembre 2026"}
 			lastUpdatedLabel={isEn ? "Last updated" : "Dernière mise à jour"}
 		>
 			{isEn ? (
 				<p>
 					Kadran is an iPhone app published by <strong>KYKS</strong> for creating home screen
-					widgets: clock, weather, calendar, countdown, notes, photos, and widgets fed by your own
-					data (JSON APIs, Shortcuts, JavaScript scripts). This page explains what data the app
-					handles, where it goes, and what your rights are, in accordance with the General Data
-					Protection Regulation (GDPR).
+					widgets: clock, weather, calendar, reminders, music, activity, photos and memories, timer,
+					shortcuts, and widgets fed by your own data (JSON APIs, Shortcuts, JavaScript scripts).
+					This page explains what data the app handles, where it goes, and what your rights are, in
+					accordance with the General Data Protection Regulation (GDPR).
 				</p>
 			) : (
 				<p>
 					Kadran est une application iPhone éditée par <strong>KYKS</strong> pour créer des widgets
-					d'écran d'accueil : horloge, météo, agenda, compte à rebours, notes, photos, et widgets
-					alimentés par vos propres données (API JSON, Raccourcis, scripts JavaScript). Cette page
-					explique quelles données l'application manipule, où elles vont, et quels sont vos droits,
-					conformément au Règlement général sur la protection des données (RGPD).
+					d'écran d'accueil : horloge, météo, agenda, rappels, musique, activité, photos et
+					souvenirs, minuteur, raccourcis, et widgets alimentés par vos propres données (API JSON,
+					Raccourcis, scripts JavaScript). Cette page explique quelles données l'application
+					manipule, où elles vont, et quels sont vos droits, conformément au Règlement général sur
+					la protection des données (RGPD).
 				</p>
 			)}
 
@@ -116,6 +117,10 @@ export default async function KadranPrivacyPage({
 							contains no analytics, advertising or crash-reporting SDK.
 						</li>
 						<li>
+							<strong>Your health data never leaves your iPhone</strong>: the Activity widget only
+							reads today's step count. It is never sent, shared or used for advertising.
+						</li>
+						<li>
 							When a widget needs outside data (weather, a city search, your own API), the request
 							goes <strong>directly from your iPhone</strong> to the service concerned, as described
 							below.
@@ -130,6 +135,11 @@ export default async function KadranPrivacyPage({
 						<li>
 							<strong>Pas de publicité, pas de mesure d'audience, pas de pistage</strong> :
 							l'application n'intègre aucun outil d'analyse, de publicité ni de rapport de plantage.
+						</li>
+						<li>
+							<strong>Vos données de santé ne quittent jamais votre iPhone</strong> : le widget
+							Activité lit seulement le nombre de pas du jour. Il n'est jamais envoyé, partagé ni
+							utilisé à des fins publicitaires.
 						</li>
 						<li>
 							Quand un widget a besoin d'une donnée extérieure (météo, recherche d'une ville, votre
@@ -149,7 +159,9 @@ export default async function KadranPrivacyPage({
 							<li>
 								<strong>Your widgets</strong>: their name, the texts and dates you type, the chosen
 								place for the weather, the style (background, colours, font), and the values sent by
-								Shortcuts or <code>kadran://</code> links.
+								Shortcuts or <code>kadran://</code> links. Also the state changed by the widgets'
+								buttons: current page, running timer, today's counter, and the last step count read
+								from Health, kept out of iCloud backups.
 							</li>
 							<li>
 								<strong>Photos</strong>: only the photo you pick, reduced to the size of a widget
@@ -177,7 +189,9 @@ export default async function KadranPrivacyPage({
 							<li>
 								<strong>Vos widgets</strong> : leur nom, les textes et dates que vous saisissez, le
 								lieu choisi pour la météo, le style (fond, couleurs, police), et les valeurs
-								envoyées par Raccourcis ou par les liens <code>kadran://</code>.
+								envoyées par Raccourcis ou par les liens <code>kadran://</code>. S'y ajoute l'état
+								changé par les boutons des widgets : page affichée, minuteur en cours, compteur du
+								jour, et le dernier nombre de pas lu dans Santé, gardé hors des sauvegardes iCloud.
 							</li>
 							<li>
 								<strong>Les photos</strong> : seulement la photo que vous choisissez, réduite à la
@@ -210,8 +224,33 @@ export default async function KadranPrivacyPage({
 							events are read on the iPhone to be displayed, and never leave it.
 						</li>
 						<li>
-							<strong>Photos</strong>: Kadran uses the system photo picker, so it only receives the
-							photo you choose — no access to the rest of your library.
+							<strong>Reminders</strong>: requested when you create a Reminders widget. Your
+							reminders to do are read on the iPhone to be displayed; tapping a reminder's circle in
+							the widget marks it as completed. Nothing else is changed, and nothing leaves the
+							iPhone.
+						</li>
+						<li>
+							<strong>Photos</strong>: for a photo widget, Kadran uses the system photo picker, so
+							it only receives the photo you choose. The Memories widget, if you add it, asks to
+							read your library in order to show a photo taken on this day in past years (or one of
+							your favourites): the photo is read and reduced on the iPhone, and Kadran keeps no
+							copy of it.
+						</li>
+						<li>
+							<strong>Health</strong>: requested when you create an Activity widget. Kadran only
+							reads today's step count, never writes anything to Health, and does not store your
+							health data in iCloud. This data is never sent to KYKS or to anyone else, and is never
+							used for advertising or profiling.
+						</li>
+						<li>
+							<strong>Apple Music</strong>: requested when you create a Vinyl widget. Kadran reads
+							the track being played (title, artist, artwork, position) to display it, and the
+							widget's buttons control playback. Your listening is never recorded or sent.
+						</li>
+						<li>
+							<strong>Notifications</strong>: requested when you create a Timer widget, only to
+							alert you when the timer ends. These notifications are created on the iPhone; Kadran
+							does not use push notifications.
 						</li>
 						<li>
 							<strong>Location</strong>: only if you tap "My location" in a Weather widget. The
@@ -230,9 +269,32 @@ export default async function KadranPrivacyPage({
 							événements sont lus sur l'iPhone pour être affichés, et ne le quittent jamais.
 						</li>
 						<li>
-							<strong>Photos</strong> : Kadran passe par le sélecteur de photos du système ; il ne
-							reçoit donc que la photo que vous choisissez, sans accès au reste de votre
-							photothèque.
+							<strong>Rappels</strong> : demandé quand vous créez un widget Rappels. Vos rappels à
+							faire sont lus sur l'iPhone pour être affichés ; toucher le rond d'un rappel dans le
+							widget le marque comme fait. Rien d'autre n'est modifié, et rien ne quitte l'iPhone.
+						</li>
+						<li>
+							<strong>Photos</strong> : pour un widget photo, Kadran passe par le sélecteur de
+							photos du système ; il ne reçoit donc que la photo que vous choisissez. Le widget
+							Souvenir, si vous l'ajoutez, demande à lire votre photothèque pour montrer une photo
+							prise ce jour-là les années passées (ou l'une de vos favorites) : la photo est lue et
+							réduite sur l'iPhone, et Kadran n'en garde aucune copie.
+						</li>
+						<li>
+							<strong>Santé</strong> : demandé quand vous créez un widget Activité. Kadran lit
+							seulement le nombre de pas du jour, n'écrit jamais rien dans Santé et ne stocke pas
+							vos données de santé dans iCloud. Ces données ne sont jamais envoyées à KYKS ni à qui
+							que ce soit, et ne servent jamais à la publicité ni au profilage.
+						</li>
+						<li>
+							<strong>Apple Music</strong> : demandé quand vous créez un widget Vinyle. Kadran lit
+							le morceau en cours (titre, artiste, pochette, position) pour l'afficher, et les
+							boutons du widget pilotent la lecture. Votre écoute n'est ni enregistrée ni envoyée.
+						</li>
+						<li>
+							<strong>Notifications</strong> : demandé quand vous créez un widget Minuteur,
+							uniquement pour vous prévenir à la fin du minuteur. Ces notifications sont créées sur
+							l'iPhone ; Kadran n'utilise pas de notifications à distance.
 						</li>
 						<li>
 							<strong>Position</strong> : seulement si vous touchez « Ma position » dans un widget
@@ -262,8 +324,9 @@ export default async function KadranPrivacyPage({
 								Weather widget are sent to Apple to get the forecast.
 							</li>
 							<li>
-								<strong>Maps</strong>: the city name you search for, or your approximate position
-								when you tap "My location", is sent to Apple to find the place and its name.
+								<strong>Maps</strong>: the city name you search for (for the weather, the sun or the
+								world clock), or your approximate position when you tap "My location", is sent to
+								Apple to find the place, its name and its time zone.
 							</li>
 							<li>
 								<strong>App Store</strong>: purchases are processed by Apple. Your Kadran Pro access
@@ -285,9 +348,10 @@ export default async function KadranPrivacyPage({
 								Météo sont envoyées à Apple pour obtenir les prévisions.
 							</li>
 							<li>
-								<strong>Plans</strong> : le nom de la ville que vous recherchez, ou votre position
-								approximative quand vous touchez « Ma position », est envoyé à Apple pour trouver le
-								lieu et son nom.
+								<strong>Plans</strong> : le nom de la ville que vous recherchez (pour la météo, le
+								soleil ou l'horloge mondiale), ou votre position approximative quand vous touchez «
+								Ma position », est envoyé à Apple pour trouver le lieu, son nom et son fuseau
+								horaire.
 							</li>
 							<li>
 								<strong>App Store</strong> : les achats sont traités par Apple. Votre accès à Kadran
@@ -321,6 +385,12 @@ export default async function KadranPrivacyPage({
 							The same applies to Shortcuts and <code>kadran://</code> links: the values they send
 							are written into the widget, on your iPhone.
 						</p>
+						<p>
+							The Shortcuts and Launcher widgets only open what you configure: an app, a phone call,
+							a message, an email, a route, one of your shortcuts or a web link. The number, address
+							or link you enter stays in the widget; it is passed to the app concerned only when you
+							tap it.
+						</p>
 					</>
 				) : (
 					<>
@@ -335,6 +405,12 @@ export default async function KadranPrivacyPage({
 						<p>
 							Il en va de même pour Raccourcis et les liens <code>kadran://</code> : les valeurs
 							qu'ils envoient sont écrites dans le widget, sur votre iPhone.
+						</p>
+						<p>
+							Les widgets Raccourcis et Lanceur ouvrent seulement ce que vous configurez : une app,
+							un appel, un message, un e-mail, un itinéraire, l'un de vos raccourcis ou un lien web.
+							Le numéro, l'adresse ou le lien saisi reste dans le widget ; il n'est transmis à l'app
+							concernée qu'au moment où vous le touchez.
 						</p>
 					</>
 				)}
@@ -389,17 +465,16 @@ export default async function KadranPrivacyPage({
 			<LegalSection heading={isEn ? "10. Changes" : "10. Évolutions"}>
 				{isEn ? (
 					<p>
-						If Kadran evolves in a way that changes the data it handles (Health, Contacts, Music,
-						notifications…), this policy and the App Store privacy label will be updated{" "}
-						<strong>before</strong> that version is released. The date at the top of this page
-						indicates the latest revision.
+						If Kadran evolves in a way that changes the data it handles (Contacts, location…), this
+						policy and the App Store privacy label will be updated <strong>before</strong> that
+						version is released. The date at the top of this page indicates the latest revision.
 					</p>
 				) : (
 					<p>
-						Si Kadran évolue d'une manière qui change les données qu'elle manipule (Santé, Contacts,
-						Musique, notifications…), cette politique et l'étiquette de confidentialité de l'App
-						Store seront mises à jour <strong>avant</strong> la sortie de cette version. La date en
-						haut de cette page indique la dernière révision.
+						Si Kadran évolue d'une manière qui change les données qu'elle manipule (Contacts,
+						position…), cette politique et l'étiquette de confidentialité de l'App Store seront
+						mises à jour <strong>avant</strong> la sortie de cette version. La date en haut de cette
+						page indique la dernière révision.
 					</p>
 				)}
 			</LegalSection>
